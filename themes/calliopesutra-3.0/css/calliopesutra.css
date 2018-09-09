@@ -1,0 +1,150 @@
+/*--------------------------------------------------------------------------------------------
+ * calliopesutra.php
+ *
+ * Copyright 2015 2016 2017 2018 by John Gambini
+ *
+ ---------------------------------------------------------------------------------------------*/
+ @CHARSET "UTF-8";
+
+body {
+	background-color: #CCCCCC;
+	font-family: verdana, tahoma, arial, sans-serif;
+}
+
+/*-------------------- Overrides from dialogs.css ----------------------*/
+
+a.menuHighlightItem
+{
+	text-decoration:none;
+	color:#6666FF;
+}
+
+a.menuHighlightItem:hover
+{
+	text-decoration:underline;
+	color:#4444FF;
+}
+
+/* -------- font specifications ------------------*/
+
+.fontSpecMenuList {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 10pt;
+}
+
+.fontSpecTitle {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 14pt;
+	color: #222266;
+	text-shadow: 1px 2px #FFFFF;
+}
+
+.fontSpecLogin {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 9pt;	
+}
+
+.fontSpecVeryVerySmall {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size:8pt;
+}
+
+.fontSpecVerySmall {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size:8pt;
+}
+
+.fontSpecSmall {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size:10pt;
+}
+
+.fontSpecMedium {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size:12pt;
+}
+
+.fontSpecLarge {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-weight:bold;
+	font-size:20pt;
+}
+
+#siteName {
+	font-family: times-new-roman;
+	width: 96%;
+	font-size:185%;
+}
+
+/*------------ mini menu horizontal layout iusing ul tags ------------*/
+
+/*------------- css for scroll table widget --------------*/
+
+/*---------------- menu icons ----------------------*/
+
+/*--------------------- CSS for main page sections ------------------*/
+
+.content {
+	background-color: #CCCCCC;
+}
+
+.contentMenu {
+	background-color: #CCCCCC;
+}
+
+.sidebar {
+	background-color:#EEEEEE;
+}
+
+@media all and (max-width:1250px) {
+	#siteName {
+		display:none;
+	}
+}
+/*--------------- CSS for specific page types -----------------------*/
+/*-------------- CSS for include widgets ---------------------*/
+
+#siteName a img {
+	border: none;
+}
+
+#siteName a:hover {
+	color: #888888;
+	text-decoration:none;
+}
+
+.topicblock img.menuItem
+{
+	border:1px solid #222266;
+	margin: 0em 0em .25em 0em;
+	color:inherit;
+}
+
+.topicblock img.menuItem:hover
+{
+	border:1px solid #F0000F;
+	color:inherit;
+}
+
+/*-----------------------------------------------------------------
+ * CSS for article blocks
+ */
+.article {
+	border:1px solid white;
+}
+
+.articleTabs {
+ 	margin: 1em 2em 1px 2em
+ }
+ 
+.articleTab {
+}
+
+.article h1 {
+}
+
+.article h2 {
+}
+
+.article h3 {
+}

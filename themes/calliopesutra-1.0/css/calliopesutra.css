@@ -1,0 +1,296 @@
+/*--------------------------------------------------------------------------------------------
+ * calliopesutra.css
+ *
+ * Copyright 2015 2016 2017 2018 by John Gambini
+ *
+ ---------------------------------------------------------------------------------------------*/
+ @CHARSET "UTF-8";
+
+/* -------- font specifications ------------------*/
+
+.fontSpecTitle {
+	font-family: times-new-roman;
+	font-size: 14pt;
+	color: #DDDDFF;
+	text-shadow: 2px 2px #000000;
+}
+
+.fontSpecLogin {
+	font-family: times-new-roman;
+	color: #DDDDFF;
+	font-size: 10pt;	
+	text-shadow: 1px 1px #000000;
+}
+
+/*------------ mini menu horizontal layout iusing ul tags ------------*/
+
+.minimenu li a img {
+	border: 1px solid #AAAAAA;
+}
+
+.minimenu li a img:hover
+{
+	border: 1px solid #FFFFFF;
+}
+
+/*------------- css for scroll table widget --------------*/
+
+
+/*---------------- menu icon ----------------------*/
+
+.wb-icon::before {
+	display: inline-block;
+	width: 60px;
+	text-align: center;
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'ecoicons';
+	line-height: 1;
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+}
+
+.wb-icon-menu::before {
+	margin-left: 0px;
+	vertical-align: 0px;
+	width: 24px;
+	height: 3px;
+	background: #DDDDDD;
+	box-shadow: 0 -6px #DDDDDD, 0 -12px #DDDDDD;
+	content: '';
+}
+
+.wb-icon-menu:hover::before {
+	background: #FFFFFF;
+	box-shadow: 0 -6px #FFFFFF, 0 -12px #FFFFFF;
+}
+
+.icon-arrow-up2::before {
+	color: #DDDDFF;
+	font-size: 14pt;
+	vertical-align: -2px;
+}
+
+.icon-arrow-up2:hover::before {
+	color: #FFFFFF;
+}
+
+.icon-circle-down::before {
+	color: #DDDDFF;
+	font-size:14pt;
+	vertical-align: -4px;
+}
+
+.icon-circle-down:hover::before {
+	color: #FFFFFF;
+}
+
+
+/*--------------------- CSS for main page sections ------------------*/
+
+.contentContainer {
+	background-color: #3c5385;
+	color: #DDDDFF;
+	text-shadow: 2px 2px #000000;
+}
+
+.contentMenu {
+	background-color: #3c5385;
+}
+
+.transparentContentMenu {
+	background-color: transparent;
+}
+
+.sidebarContainer {
+	font-family: verdana, tahoma, arial, sans-serif;
+	background-color: #6A87A9;
+	top: 0;
+	text-shadow: 2px 2px #000000;
+	color: #E9E9FF;
+}
+
+.sidebar {
+	font-family: verdana, tahoma, arial, sans-serif;
+	font-size: 11pt;
+	width: 100%;
+	height: inherit;
+	padding: 0em 1em;
+	overflow-y: auto;
+	overflow-x: wrap;
+}
+
+.rightbarContainer {
+	position: relative;
+	top:0em;
+	float:right;
+	width: 20%;
+	height: inherit;
+	overflow-y: hidden;
+	border-left: 0px;
+}
+
+#mainmenuItem2 { flex:1 1 15%; }
+#mainmenuItem3 { flex:1 1 80%; }
+#mainmenuItem4 { flex:1 1 20%; }
+
+/*--------------- CSS for specific page types -----------------------*/
+
+.imageContent {
+	color: #000000;
+	text-shadow:none;
+	background-color:#EEEEEE;
+	border-radius: 8px;
+	border: 1px solid #0000DD;
+	min-height:75%;
+	margin-bottom: 0.5em;
+	-webkit-font-smoothing: antialiased;
+	-moz-font-smoothing: antialiased;
+}
+
+.imagefooter {
+	color: #FFFFFF;
+}
+
+/*-------------- CSS for includes and widgets ---------------------*/
+
+.siteName {
+	font-family: times-new-roman;
+	text-shadow: 3px 3px #000000;
+	color:#EDEDED;
+	width: 96%;
+	font-size:20pt;	
+}
+
+
+#siteName:hover {
+	color:#FFFFFF;
+}
+
+.topicblock {
+}
+
+.topicblock img.menuItem
+{
+	border:1px solid #AAAAAA;
+}
+
+.topicblock img.menuItem:hover
+{
+	border:1px solid #F0000F;
+}
+
+.langElementHighlight a img {
+	width: 28px;
+	outline: 1px solid #FFFFFF;
+}
+
+
+#wb_searchBar {
+	border-left: 1px solid #DDDDFF;
+	border-top: 1px solid #DDDDFF;
+	border-bottom: 1px solid black;
+	border-right: 1px solid black;
+}
+
+a.menuHighlightItem
+{
+	text-decoration:none;
+	color:#FFFFFF;
+	text-shadow: 2px 2px #AA0000;
+}
+
+a.menuItem:hover
+{
+	text-decoration:underline;
+	color:inherit;
+}
+
+a.menuHighlightItem:hover
+{
+	text-decoration:underline;
+	color:#FFFFFF;
+	text-shadow: 0px 0px #880000;
+}
+
+a.linkItem { text-decoration:none; text-shadow: 2px 2px #000000; color:#CCCCFF; }
+a.linkItem:hover { text-decoration:underline; text-shadow: 0px 0px #FFFFFF;	}
+
+/*-----------------------------------------------------------------
+ * CSS for article blocks
+ */
+.article {
+	border:1px solid red
+}
+
+.article a.linkItem
+{
+	text-decoration:none;
+	color:#000099;
+}
+
+.article a.linkItem:hover
+{
+	text-decoration:underline;
+	text-shadow: 0px 0px #000000;
+}
+
+a.linkItem:hover
+{
+	text-decoration:underline;
+	text-shadow: 0px 0px #000000;
+}
+
+ 
+.articleTab {
+	border-bottom:none
+}
+
+.articleTabs {
+ 	margin: 0em 3em
+ }
+ 
+#articleText {
+	background-color:inherit;	
+}
+ 
+ 
+.imageViewer {
+}
+
+.imageViewer img {
+	width:45%;
+	float:left;
+	margin:0em 2% 2% 0%;
+	border:1px solid #DDDDFF;
+	border-radius:5px;
+}
+
+.rightBlock {
+	width:40%;
+	float:right;
+	margin:1em 1em 1em 2em;
+}
+
+.leftBlock {
+	width:40%;
+	float:left;
+	margin:1em 2em 1em 1em;
+}
+
+.featuredItemImage {
+	border:1px solid #DDDDDD;
+	border-radius:6px;
+}
+
+@media all and (max-width:760px) {
+	
+	.imageViewer img {
+		float:none;
+		width:100%;
+		margin:0 auto;
+	}
+
+

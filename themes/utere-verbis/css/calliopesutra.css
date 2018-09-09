@@ -1,0 +1,148 @@
+/*--------------------------------------------------------------------------------------------
+ * calliopesutra.css
+ *
+ * Copyright 2015 2016 2017 2018 by John Gambini
+ *
+ ---------------------------------------------------------------------------------------------*/
+ @CHARSET "UTF-8";
+ 
+/*---------------- menu icon ----------------------*/
+
+.icon-circle-down:hover::before {
+	color: #EEEEEE;
+}
+ 
+ /*--------------------- CSS for main page sections ------------------*/
+ 
+ .topMenu {
+	display:flex;
+	align-items:center;
+ 	position:fixed;
+ 	top:0;
+ 	background-color:transparent;
+ 	color:white;
+ 	width:100%;
+ 	margin:0em auto;
+ 	height:3.50em;
+ 	z-index:1;
+ }
+ 
+ .mainmenu {
+	display:flex;
+	align-items:center;
+	position:fixed;
+	top: -2.5em;
+	left: 0px;
+	width: 100%;
+	height: 3.50em;
+	z-index:1;
+	background-color:black;
+	box-shadow: 0px 2px 12px #888888;
+	transition: top 0.5s;
+}
+
+.contentMenu {
+	background-color:transparent;
+}
+
+#mainmenuItem1 { flex:1 1 10%; }
+#mainmenuItem2 { flex:1 1 0% }
+#mainmenuItem3 { flex:1 1 70% }
+#mainmenuItem4 { flex:1 1 19% }
+
+@media all and (max-width:760px) { 
+	#mainmenuItem1 { flex:1 1 50%; }
+	#mainmenuItem3 { flex:1 1 0%; }
+	#mainmenuItem4 { flex:1 1 49.5%; }
+}
+
+
+/*--------------- CSS for specific page types -----------------------*/
+.gallery {
+
+}
+
+.parallax {
+	position:relative;
+	width:inherit;
+	height:100%;
+	color:white;
+	text-shadow: 1px 1px #004400;
+	border:1px solid #002200;
+	background-position:center;
+	background-size:cover;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+
+/*-------------- CSS for includes and widgets ---------------------*/
+
+.siteName {
+	color:#FFFFFF;
+	font-family: times-new-roman;
+	font-size: 20pt;	
+}
+
+.siteName:hover {
+	color:#DDDDEE;
+}
+
+#userName {
+	color:#DDDDEE;
+}
+
+#articleEditLink {
+	color:#DDDDEE;
+}
+
+#articleEditLink:hover {
+	color:#FFFFFF;
+}
+
+#rootContentItems {
+	display:inline-block;
+}
+
+@media all and (max-width:699px) {
+	#siteName {
+		display:inline-block;
+	}
+	
+	#userName {
+		display:none;
+	}
+	
+	#rootContentItems {
+		display:none;
+	}
+	
+}
+
+/*-----------------------------------------------------------------
+ * CSS for article blocks
+ */
+
+.article {
+	background-color: #FFFFFF;
+	color: #000000;
+	text-shadow: 0px 0px #000000;
+	margin:0em 10% 1em 10%;
+	padding:0em 0em;
+}
+
+
+/*------------- css for dialogs and scroll table widget --------------*/
+
+#popupLanguages {
+	display:block;
+}
+
+#popupHr {
+	display:block;
+}
+
+@media all and (max-width:699px) {
+	#popupMainMenu {
+		display:none;
+	}
+}
