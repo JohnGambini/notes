@@ -24,7 +24,7 @@ global $dbObj;
 				
 				foreach($dataArrays->rootContentArray as $key => $values) {
 			?>
-				<li style="display:inline-block; padding:0em 1em; color:#DDDDEE"><a class="menuItem" href="<?php echo SITE_NAME . SUBSITE_NAME . $values['permalink']?>"><?php echo $values['title']?></a></li> 
+				<li style="display:inline-block; padding:0em 1em; color:#DDDDEE; text-shadow:1px 1px #000000"><a class="menuItem" href="<?php echo SITE_NAME . SUBSITE_NAME . $values['permalink']?>"><?php echo $values['title']?></a></li> 
 			<?php } } else { $errorMessage = $dbObj->error;
 			 } ?>	
 		</ul>
