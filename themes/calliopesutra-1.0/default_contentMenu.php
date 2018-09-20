@@ -10,6 +10,7 @@ global $userObj;
 
 $menuId = 'popupContentMenu';
 ?>
+<!-- calliope-sutra-1.0 default_contentMenu -->
 <div id="contentMenu" class="contentMenu">
 	<div id="mainmenuItem2">&nbsp;</div>
 	<div id="mainmenuItem3">
