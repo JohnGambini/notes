@@ -132,10 +132,6 @@
 	border-left: 0px;
 }
 
-#mainmenuItem2 { flex:1 1 15%; }
-#mainmenuItem3 { flex:1 1 80%; }
-#mainmenuItem4 { flex:1 1 20%; }
-
 /*--------------- CSS for specific page types -----------------------*/
 
 .imageContent {
@@ -164,9 +160,28 @@
 	font-size:20pt;	
 }
 
-
 #siteName:hover {
 	color:#FFFFFF;
+}
+
+#mainmenuItem2 > .siteNameMenu > .siteName {
+	display: none;
+}
+
+#contentMenuTrigger-2 {
+	display:none;
+}
+
+#mainmenuItem2 { flex:1 1 15%; }
+#mainmenuItem3 { flex:1 1 80%; }
+#mainmenuItem4 { flex:1 1 20%; }
+
+@media all and (max-width:760px) { 
+	.sidebarContainer { display:none; } 
+	#contentMenuTrigger-1 { display:block; } 
+	.contentContainer { width:100%; }
+	#contentMenuTrigger-2 { display:block;}
+	 
 }
 
 .topicblock {
