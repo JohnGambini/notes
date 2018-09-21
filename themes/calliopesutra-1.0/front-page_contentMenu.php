@@ -11,9 +11,11 @@ global $userObj;
 $menuId = 'popupContentMenu';
 ?>
 <div id="transparentContentMenu" class="transparentContentMenu">
-	<div id="mainmenuItem2">&nbsp;</div>
+	<div id="mainmenuItem2" style="margin:0em 0em 0em 20px">
+			<?php set_siteNameMenu($contentObj,$userObj,'contentMenuTrigger-2') ?>
+	</div>
 	<div id="mainmenuItem3">&nbsp;</div>
-	<div id="mainmenuItem4">
+	<div id="mainmenuItem4" style="padding:0em 1% 0em 0em">
 		<?php set_siteUserMenu($contentObj, $userObj); set_articleEditLink($contentObj, $userObj) ?>
 	</div>
 </div>

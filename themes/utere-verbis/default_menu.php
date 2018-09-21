@@ -14,7 +14,7 @@ global $dbObj;
 ?>
 <!-- utere-verbis/default_menu.php  -->
 <div id="mainmenu" class="mainmenu">
-	<div id="mainmenuItem1" style="margin:0em 0em 0em 20px">
+	<div id="mainmenuItem1" style="padding:0em 0em 0em 20px">
 		<?php set_siteNameMenu($contentObj,$userObj) ?>
 	</div>
 	<div id="mainmenuItem3" style="margin:10px 0em;text-align:left">
@@ -35,7 +35,7 @@ global $dbObj;
 			?>
 		</ul>
 	</div>
-	<div id="mainmenuItem4" style="margin:0em 1% 0em 0em; align-items:center; text-align:right">
+	<div id="mainmenuItem4" style="padding:0em 1% 0em 0em; align-items:center; text-align:right">
 		<?php set_siteUserMenu($contentObj, $userObj); set_articleEditLink($contentObj, $userObj) ?>
 	</div>
 </div>

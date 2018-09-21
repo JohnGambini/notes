@@ -172,15 +172,16 @@
 	display:none;
 }
 
-#mainmenuItem2 { flex:1 1 15%; }
-#mainmenuItem3 { flex:1 1 80%; }
-#mainmenuItem4 { flex:1 1 20%; }
+#mainmenuItem2 { flex:1 1 20em; }
+#mainmenuItem3 { flex:1 1 100%; }
+#mainmenuItem4 { flex:1 1 20em; }
 
 @media all and (max-width:760px) { 
 	.sidebarContainer { display:none; } 
 	#contentMenuTrigger-1 { display:block; } 
 	.contentContainer { width:100%; }
-	#contentMenuTrigger-2 { display:block;}
+	#contentMenuTrigger-2 { display:inline-block;}
+	#mainmenuItem2 > .siteNameMenu > .siteName { display:inline-block}
 	 
 }
 
