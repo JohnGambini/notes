@@ -38,9 +38,9 @@ require_once( WORKBENCH_DIR . '\php\includes\galleryWidgetString.php');
 $userObj = new dbUser();
 $dbObj = new mysqliDatabase();
 
-$errorMessage = '';
-$successMessage = '';
-$debugMessage = '';
+//$errorMessage = '';
+//$successMessage = '';
+//$debugMessage = '';
 
 if( ! $dbObj->connect(DB_HOST,DB_USER,DB_PASSWORD,DATABASE,DB_CHARSET)) {
 	$errorMessage = $dbObj->error;
