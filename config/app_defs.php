@@ -8,7 +8,7 @@
 define('APP_NAME','Notes');
 define('SITE_NAME', "http://localhost");
 define('DATABASE', 'workbench_1');
-define('THEME','utere-verbis');
+define('THEME','calliopesutra-1.0');
 define('SUBSITE_NAME', '/notes');
 define('WORKBENCH_FOLDER', SITE_NAME . '/workbench');
 
