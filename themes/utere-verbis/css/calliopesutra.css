@@ -11,6 +11,15 @@
 .icon-circle-down:hover::before {
 	color: #EEEEEE;
 }
+
+.wb-icon-menu::before { background: #BBBBBB; box-shadow: 0 -6px #BBBBBB, 0 -12px #BBBBBB; }
+.wb-icon-menu:hover::before { background: #EEEEEE; box-shadow: 0 -6px #EEEEEE, 0 -12px #EEEEEE; }
+.icon-circle-down::before { color: #BBBBBB; font-size:14pt; vertical-align: -4px; }
+.icon-circle-down:hover::before { color: #EEEEEE; }
+.icon-point-up::before { color: #999999; font-size: 14pt; vertical-align: 4px; }
+.icon-point-up:hover::before { color: #000000; }
+.icon-arrow-up2::before { color: #888888; font-size: 14pt; vertical-align: -2px; }
+.icon-arrow-up2:hover::before { color: #000000; }
  
  /*--------------------- CSS for main page sections ------------------*/
  
