@@ -6,11 +6,12 @@
  ---------------------------------------------------------------------------------------------*/
  @CHARSET "UTF-8";
  
-/*---------------- menu icon ----------------------*/
-
-.icon-circle-down:hover::before {
-	color: #EEEEEE;
-}
+ body {
+ 	background-color:#4477BA;
+ }
+ 
+ 
+/*---------------- main menu ----------------------*/
 
 .wb-icon-menu::before { background: #BBBBBB; box-shadow: 0 -6px #BBBBBB, 0 -12px #BBBBBB; }
 .wb-icon-menu:hover::before { background: #EEEEEE; box-shadow: 0 -6px #EEEEEE, 0 -12px #EEEEEE; }
@@ -21,7 +22,34 @@
 .icon-arrow-up2::before { color: #888888; font-size: 14pt; vertical-align: -2px; }
 .icon-arrow-up2:hover::before { color: #000000; }
  
+.menuHighlightItem {
+	color:#CCEEFF;
+	text-decoration:none;
+} 
+
+.menuHighlightItem:hover {
+	color:#CCEEFF;
+	text-decoration:underline;
+} 
+
+a.linkItem {
+	color:#DDEEFF;
+} 
+
+a.linkItem:hover {
+	color:#DDEEFF;
+} 
+ 
  /*--------------------- CSS for main page sections ------------------*/
+.sidebarContainer{
+	background-color:#4467AA;
+	color:#EEEEEE;
+}
+
+ .contentContainer {
+ 	color:#EEEEEE;
+ }
+ 
  
  .topMenu {
 	display:flex;
@@ -131,9 +159,10 @@
  */
 
 .article {
-	background-color: #FFFFFF;
+	background-color: white;
 	color: #000000;
 	text-shadow: 0px 0px #000000;
+	border:1px solid #990000;
 }
 
 
