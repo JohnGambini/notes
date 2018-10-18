@@ -18,6 +18,7 @@ global $dbObj;
 		<?php set_siteNameMenu($contentObj,$userObj) ?>
 	</div>
 	<div id="mainmenuItem3" style="margin:10px 0em;text-align:left">
+	<!-- 
 		<ul id="rootContentItems" style="font-size:16pt">
 			<?php
 				if($dataArrays->get_rootContentArray($dbObj, $sqlObject)) {
@@ -34,6 +35,7 @@ global $dbObj;
 			}
 			?>
 		</ul>
+		-->
 	</div>
 	<div id="mainmenuItem4" style="padding:0em 1% 0em 0em; align-items:center; text-align:right">
 		<?php set_siteUserMenu($contentObj, $userObj); set_articleEditLink($contentObj, $userObj) ?>
