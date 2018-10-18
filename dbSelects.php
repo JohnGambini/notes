@@ -34,6 +34,7 @@ require_once( WORKBENCH_DIR . '\php\objects\wbSql.php');
 require_once( WORKBENCH_DIR . '\php\objects\wbDataArrays.php');
 require_once( WORKBENCH_DIR . '\php\includes\wb_functions.php');
 require_once( WORKBENCH_DIR . '\php\includes\galleryWidgetString.php');
+require_once( WORKBENCH_DIR . '\php\includes\articlesWidgetString.php');
 
 $userObj = new dbUser();
 $dbObj = new mysqliDatabase();
