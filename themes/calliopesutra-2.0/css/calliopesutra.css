@@ -78,3 +78,9 @@ a.linkItem
 	text-decoration:none;
 	color:#FFFFCC;
 }
+
+.firstCharacter:first-letter {
+	color:#F24;
+	text-shadow:1px 1px black;
+}
+

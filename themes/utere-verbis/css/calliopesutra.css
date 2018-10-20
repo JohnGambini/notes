@@ -42,12 +42,13 @@ a.linkItem:hover {
  
  /*--------------------- CSS for main page sections ------------------*/
 .sidebarContainer{
-	background-color:#4467AA;
+	background-color:#446799;
 	color:#EEEEEE;
 }
 
  .contentContainer {
- 	color:#EEEEEE;
+	background-color:#446799;
+	color:#EEEEEE;
  }
  
  
@@ -96,19 +97,29 @@ a.linkItem:hover {
 
 /*--------------- CSS for specific page types -----------------------*/
 .gallery {
-
 }
 
 .parallax {
-	position:relative;
-	width:inherit;
-	height:100%;
-	color:white;
-	text-shadow: 1px 1px #004400;
-	background-position:center;
-	background-size:cover;
-	background-repeat:no-repeat;
-	background-attachment:fixed;
+}
+
+.menuItem {
+	text-shadow: 1px 1px black
+}
+
+.wb-dialog .menuItem {
+	text-shadow: none;
+}
+
+.articleTab .menuItem {
+	text-shadow: none;
+}
+
+.featuredItemMain {
+	text-shadow: 1px 1px black
+}
+
+.featuredItem {
+	text-shadow: 1px 1px black
 }
 
 /*-------------- CSS for includes and widgets ---------------------*/
@@ -165,6 +176,10 @@ a.linkItem:hover {
 	border:1px solid #990000;
 }
 
+.firstCharacter:first-letter {
+	color:#DD2266;
+	text-shadow:1px 1px black;
+}
 
 /*------------- css for dialogs and scroll table widget --------------*/
 
