@@ -54,7 +54,7 @@ require_once( WORKBENCH_DIR . '\php\wb_database_updates.php');
 if(database_updates($dbObj, $userObj) == false) {
 	$errorMessage = $errorMessage . $dbObj->error;
 	$articleData = array(
-			replace_wb_variable($_POST['editor']),
+			replace_wb_variable($_POST['editor'], $dbObj),
 			'Last Modified: ' . date("Y-m-d h:i:sa"),
 			//unproccessed text for the client editor
 			$_POST['editor']
