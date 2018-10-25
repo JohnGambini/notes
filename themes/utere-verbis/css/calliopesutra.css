@@ -146,6 +146,10 @@ a.linkItem:hover {
 	color:#FFFFFF;
 }
 
+#galleryTitle {
+	text-shadow:1px 1px black;
+}
+
 #rootContentItems {
 	display:inline-block;
 }
