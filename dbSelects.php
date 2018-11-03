@@ -35,6 +35,7 @@ require_once( WORKBENCH_DIR . '\php\objects\wbDataArrays.php');
 require_once( WORKBENCH_DIR . '\php\includes\wb_functions.php');
 require_once( WORKBENCH_DIR . '\php\includes\galleryWidgetString.php');
 require_once( WORKBENCH_DIR . '\php\includes\articlesWidgetString.php');
+require_once( WORKBENCH_DIR . '\php\includes\languagesString.php');
 
 $userObj = new dbUser();
 $dbObj = new mysqliDatabase();
@@ -74,6 +75,9 @@ $debugMessage = 'contentId = ' . $contentId .
  die(json_encode(array($errorMessage,$successMessage,$debugMessage)));
  */
 
+/* This has to come before the content query */
+$userObj->get_user_groups($dbObj);
+
 /* Get the content object */
 $contentObj = new dbContent();
 $contentObj->ID = $contentId;
@@ -88,6 +92,9 @@ $dataArrays = new wbDataArrays();
 if(strlen($errorMessage))
 	exit(json_encode(array($errorMessage,$successMessage,$debugMessage)));
 
+$userObj->get_user_bio($dbObj,$contentObj->lang);	
+$contentObj->get_owner_info($dbObj);	
+	
 if( isset($_POST['getPost'])) {
 	
 	$tabName = isset($_POST['tabName']) ? $_POST['tabName'] : "";
@@ -103,7 +110,7 @@ if( isset($_POST['getPost'])) {
 	}
 	
 	$articleData = array(
-			replace_wb_variable($dataArrays->tabsArray[$tabName]['articleText'],$dbObj, $sqlObject, $contentObj, $dataArrays),
+			replace_wb_variable($dataArrays->tabsArray[$tabName]['articleText'], $dbObj, $userObj, $contentObj, $sqlObject, $dataArrays),
 			'Last Modified: ' . $dataArrays->tabsArray[$tabName]['dateModified'],
 			//unproccessed text for the client editor
 			"" . $dataArrays->tabsArray[$tabName]['articleText']
