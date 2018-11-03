@@ -7,7 +7,7 @@
  @CHARSET "UTF-8";
  
  body {
- 	background-color:#4477BA;
+ 	background-image: linear-gradient(#CDCDCD, #EEEEEE, #EFEFEF);
  }
  
  
@@ -23,32 +23,28 @@
 .icon-arrow-up2:hover::before { color: #000000; }
  
 .menuHighlightItem {
-	color:#CCEEFF;
+	color:#4444DD;
 	text-decoration:none;
 } 
 
 .menuHighlightItem:hover {
-	color:#CCEEFF;
+	color:#444444D;
 	text-decoration:underline;
 } 
 
 a.linkItem {
-	color:#DDEEFF;
+	color:#44444DD;
 } 
 
 a.linkItem:hover {
-	color:#DDEEFF;
+	color:##44444D;
 } 
  
  /*--------------------- CSS for main page sections ------------------*/
 .sidebarContainer{
-	background-color:#446799;
-	color:#EEEEEE;
 }
 
  .contentContainer {
-	background-color:#446799;
-	color:#EEEEEE;
  }
  
  
@@ -103,7 +99,6 @@ a.linkItem:hover {
 }
 
 .menuItem {
-	text-shadow: 1px 1px black
 }
 
 .wb-dialog .menuItem {
@@ -115,11 +110,9 @@ a.linkItem:hover {
 }
 
 .featuredItemMain {
-	text-shadow: 1px 1px black
 }
 
 .featuredItem {
-	text-shadow: 1px 1px black
 }
 
 /*-------------- CSS for includes and widgets ---------------------*/
@@ -147,7 +140,6 @@ a.linkItem:hover {
 }
 
 #galleryTitle {
-	text-shadow:1px 1px black;
 }
 
 #rootContentItems {
