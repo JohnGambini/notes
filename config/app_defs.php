@@ -1,14 +1,14 @@
 <?php
-/*--------------------------------------------------------------------------------------------
+/*----------------------------------------------------------------------
  * app_defs.php
  *
  * Copyright 2015 2016 2017 2018 by John Gambini
  *
- ---------------------------------------------------------------------------------------------*/
-define('APP_NAME','Notes');
+ ----------------------------------------------------------------------*/
+define('APP_NAME','Manîn Abocss');
 define('SITE_NAME', "http://localhost");
 define('DATABASE', 'workbench_1');
-define('THEME','calliopesutra-1.0');
+define('THEME','default');
 define('SUBSITE_NAME', '/notes');
 define('WORKBENCH_FOLDER', SITE_NAME . '/workbench');
 
@@ -21,7 +21,7 @@ define('PDFDIR', SITE_NAME . '/pdf');
 define('WEBROOT', $_SERVER["DOCUMENT_ROOT"]);
 define('SOURCEDIR', ABSDIR . "\\themes");
 define('SOURCECONTENT', ABSDIR . "\\wb-content\\" . DATABASE );
-define('WORKBENCH_DIR', WEBROOT . "\\workbench" );
+define('WORKBENCH_DIR', WEBROOT . "/workbench" );
 
 //pdo connection information
 define('DB_HOST','127.0.0.1');
