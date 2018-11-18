@@ -26,11 +26,6 @@ if( count($dataArrays->tabsArray) != 0) {
 	$width = "33%";
 }
 
-$dataArrays->get_galleryItemsArray($dbObj, $sqlObject);
-
-//echo serialize($dataArrays->galleryItemsArray);
-//die();
-
 ?>
 
 <div id="contentContainer" class="contentContainer" style="background-image:url(<?php echo WORKBENCH_FOLDER . "/images" . $contentObj->galleryImage ?>)">

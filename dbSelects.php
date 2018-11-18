@@ -110,7 +110,7 @@ if( isset($_POST['getPost'])) {
 	}
 	
 	$articleData = array(
-			replace_wb_variable($dataArrays->tabsArray[$tabName]['articleText'], $dbObj, $userObj, $contentObj, $sqlObject, $dataArrays),
+			replace_wb_variable($dataArrays->tabsArray[$tabName]['articleText'], $dbObj, $contentObj, $sqlObject, $dataArrays),
 			'Last Modified: ' . $dataArrays->tabsArray[$tabName]['dateModified'],
 			//unproccessed text for the client editor
 			"" . $dataArrays->tabsArray[$tabName]['articleText']

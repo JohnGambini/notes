@@ -55,7 +55,7 @@ require_once( WORKBENCH_DIR . '\php\wb_database_updates.php');
 if(database_updates($dbObj, $userObj) == false) {
 	$errorMessage = $errorMessage . $dbObj->error;
 	$articleData = array(
-			replace_wb_variable($_POST['editor'], $dbObj, $userObj),
+			replace_wb_variable($_POST['editor'], $dbObj ),
 			'Last Modified: ' . date("Y-m-d h:i:sa"),
 			//unproccessed text for the client editor
 			$_POST['editor']
@@ -71,14 +71,12 @@ if(database_updates($dbObj, $userObj) == false) {
 	
 	$sqlObject = new wbSql($userObj,$contentObj);
 	$dataArrays = new wbDataArrays();
-	
+
 	//$error = 'Always throw this error';
 	//throw new Exception($error);
 	
-	//$dataArrays->get_galleryItemsArray($dbObj, $sqlObject);
-	
 	$articleData = array(
-			replace_wb_variable("" . $_POST['editor'], $dbObj, $userObj, $contentObj, $sqlObject, $dataArrays),
+			replace_wb_variable("" . $_POST['editor'], $dbObj, $contentObj, $sqlObject, $dataArrays),
 			'Last Modified: ' . date("Y-m-d h:i:sa"),
 			//unproccessed text for the client editor
 			"" . $_POST['editor']
