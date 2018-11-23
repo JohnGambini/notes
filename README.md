@@ -1,2 +1,2 @@
 # notes-1
-notes website public
+This is a very early version of the notes content management system. It was built on workbench which has evolved into an application framework for content management sites. The delineation between notes and workbench is that notes is the folder that contains the index file for the site along with directories for the content's images and the directories for various themes. Workbench is the code base that caches the content management database and provides a menuing system as well as a selection of page types to the user interface. A content management site built on the workbench code base assigns a page type to each web page. This determines the layout of that page.
