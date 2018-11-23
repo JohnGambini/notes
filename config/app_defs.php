@@ -34,5 +34,6 @@ define('INCLUDE_SQL_IN_ERROR_MESSAGE', true );
 define('LOCALE_DIR', WORKBENCH_DIR .'/locale');
 define('DEFAULT_LOCALE', 'en_US');
 
+
 define('DEBUG_VERBOSE', false);
 ?>
