@@ -65,6 +65,7 @@ if(database_updates($dbObj, $userObj) == false) {
 	$successMessage = "The database has been successfully updated.";
 	$contentObj = new dbContent();
 	$contentObj->ID = $_POST['Id'];
+	$userObj->get_user_groups($dbObj);
 	if($contentObj->get_content_by_id($dbObj,$userObj) == false) {
 		$errorMessage = "dbUpdates: " . $contentObj->db_error;
 	}
