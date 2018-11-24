@@ -1,0 +1,11 @@
+{
+    "repositories": {
+        "workbench": {
+            "type": "vcs",
+            "url": "https://github.com/JohnGambini/workbench.git"
+        }
+    },
+    "require": {
+        "workbench/core": "v0.2"
+    }
+}

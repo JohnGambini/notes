@@ -51,7 +51,7 @@ if( ! $dbObj->connect(DB_HOST,DB_USER,DB_PASSWORD,DATABASE,DB_CHARSET)) {
 
 if( empty($_SESSION['userID']) or isset($_GET["signoff"]))
 {
-	session_destroy();
+	@session_destroy();
 	session_write_close();
 
 } else if ( $userObj->get_user($dbObj,$_SESSION['userID']) == false ) {
