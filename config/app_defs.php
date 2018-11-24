@@ -10,7 +10,7 @@ define('SITE_NAME', "http://localhost");
 define('DATABASE', 'workbench_1');
 define('THEME','default');
 define('SUBSITE_NAME', '/notes');
-define('WORKBENCH_FOLDER', SITE_NAME . '/workbench');
+define('WORKBENCH_FOLDER', SITE_NAME . '/notes/vendor/workbench/core');
 
 define('WEBAPP', SITE_NAME . SUBSITE_NAME);
 define( 'THEMEDIR', SUBSITE_NAME . '/themes');
@@ -21,7 +21,7 @@ define('PDFDIR', SITE_NAME . '/pdf');
 define('WEBROOT', $_SERVER["DOCUMENT_ROOT"]);
 define('SOURCEDIR', ABSDIR . "\\themes");
 define('SOURCECONTENT', ABSDIR . "\\wb-content\\" . DATABASE );
-define('WORKBENCH_DIR', WEBROOT . "/workbench" );
+define('WORKBENCH_DIR', WEBROOT . "/notes/vendor/workbench/core" );
 
 //pdo connection information
 define('DB_HOST','127.0.0.1');
