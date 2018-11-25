@@ -84,6 +84,8 @@ $contentObj->ID = $contentId;
 if($contentObj->get_content_by_id($dbObj,$userObj) == false) {
 	$errorMessage = "dbSelect: " . $contentObj->db_error;
 }
+
+$contentObj->parentId = $parentId;
 	
 $sqlObject = new wbSql($userObj,$contentObj);
 
