@@ -1,6 +1,6 @@
 {
     "require": {
-        "workbench/core": "0.4.02",
+        "workbench/core": "0.4.03",
         "workbench/util": "0.4.07",
         "gettext/gettext": "^4.6"
     },
