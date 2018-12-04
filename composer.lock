@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "af9867f4c3f91090a3954722001f8cab",
+    "content-hash": "92e9e59f77a679ef30f98a8c6b66ad9f",
     "packages": [
         {
             "name": "gettext/gettext",
@@ -131,20 +131,21 @@
         },
         {
             "name": "workbench/core",
-            "version": "0.4.03",
+            "version": "0.4.09",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JohnGambini/workbench.git",
-                "reference": "5ed40035022d5e3ae39d6e146145e14cdad5fb5d"
+                "reference": "423499ab96c6d521c88a24b535646fcf0315c1f3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/5ed40035022d5e3ae39d6e146145e14cdad5fb5d",
-                "reference": "5ed40035022d5e3ae39d6e146145e14cdad5fb5d",
+                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/423499ab96c6d521c88a24b535646fcf0315c1f3",
+                "reference": "423499ab96c6d521c88a24b535646fcf0315c1f3",
                 "shasum": ""
             },
             "require": {
                 "gettext/gettext": "^4.6",
+                "workbench/db": "0.4.06",
                 "workbench/util": "0.4.07"
             },
             "type": "package",
@@ -160,10 +161,56 @@
             "description": "A content management codebase",
             "homepage": "https://plus.google.com/+JohnGambini",
             "support": {
-                "source": "https://github.com/JohnGambini/workbench/tree/0.4.03",
+                "source": "https://github.com/JohnGambini/workbench/tree/0.4.09",
                 "issues": "https://github.com/JohnGambini/workbench/issues"
             },
-            "time": "2018-11-28T02:26:28+00:00"
+            "time": "2018-12-01T23:51:04+00:00"
+        },
+        {
+            "name": "workbench/db",
+            "version": "0.4.06",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JohnGambini/workbench-db.git",
+                "reference": "745107d4ba030194b533097ee18360bd7095ed93"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JohnGambini/workbench-db/zipball/745107d4ba030194b533097ee18360bd7095ed93",
+                "reference": "745107d4ba030194b533097ee18360bd7095ed93",
+                "shasum": ""
+            },
+            "require": {
+                "workbench/util": "0.4.07"
+            },
+            "type": "package",
+            "autoload": {
+                "classmap": [
+                    "dbContent.php",
+                    "dbObject.php",
+                    "dbUser.php",
+                    "mysqliDatabase.php",
+                    "pdoDatabase.php",
+                    "wbDatabase.php",
+                    "wbMenuItem.php"
+                ]
+            },
+            "license": [
+                "GPL-3.0-or-later"
+            ],
+            "authors": [
+                {
+                    "name": "John Gambini",
+                    "role": ""
+                }
+            ],
+            "description": "Database objects and database entity objects for the Workbench framework.",
+            "homepage": "https://plus.google.com/+JohnGambini",
+            "support": {
+                "source": "https://github.com/JohnGambini/workbench-db/tree/0.4.06",
+                "issues": "https://github.com/JohnGambini/workbench-db/issues"
+            },
+            "time": "2018-11-29T04:55:21+00:00"
         },
         {
             "name": "workbench/util",
