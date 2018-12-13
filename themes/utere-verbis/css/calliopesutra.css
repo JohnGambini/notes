@@ -79,17 +79,11 @@ a.linkItem:hover {
 	background-color:transparent;
 }
 
-#mainmenuItem1 { flex:1 1 10%; }
-#mainmenuItem2 { flex:1 1 0% }
-#mainmenuItem3 { flex:1 1 70% }
-#mainmenuItem4 { flex:1 1 19% }
-
 @media all and (max-width:760px) { 
 	#mainmenuItem1 { flex:1 1 50%; }
 	#mainmenuItem3 { flex:1 1 0%; }
 	#mainmenuItem4 { flex:1 1 49.5%; }
 }
-
 
 /*--------------- CSS for specific page types -----------------------*/
 .gallery {
