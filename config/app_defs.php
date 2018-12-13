@@ -5,7 +5,7 @@
  * Copyright 2015 2016 2017 2018 by John Gambini
  *
  ----------------------------------------------------------------------*/
-define('APP_NAME','Manîn A. Bocss');
+define('APP_NAME','Notes');
 define('SITE_NAME', 'http://' . $_SERVER['HTTP_HOST']);
 define('DATABASE', 'workbench_1');
 define('THEME','default');

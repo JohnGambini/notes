@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "92e9e59f77a679ef30f98a8c6b66ad9f",
+    "content-hash": "ee49d739cfe9ff4ba0aed63f96440616",
     "packages": [
         {
             "name": "gettext/gettext",
@@ -131,16 +131,16 @@
         },
         {
             "name": "workbench/core",
-            "version": "0.4.09",
+            "version": "0.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JohnGambini/workbench.git",
-                "reference": "423499ab96c6d521c88a24b535646fcf0315c1f3"
+                "reference": "f6e227cec538df8ecaf49bfe0b7c7b952e7559d0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/423499ab96c6d521c88a24b535646fcf0315c1f3",
-                "reference": "423499ab96c6d521c88a24b535646fcf0315c1f3",
+                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/f6e227cec538df8ecaf49bfe0b7c7b952e7559d0",
+                "reference": "f6e227cec538df8ecaf49bfe0b7c7b952e7559d0",
                 "shasum": ""
             },
             "require": {
@@ -161,10 +161,10 @@
             "description": "A content management codebase",
             "homepage": "https://plus.google.com/+JohnGambini",
             "support": {
-                "source": "https://github.com/JohnGambini/workbench/tree/0.4.09",
+                "source": "https://github.com/JohnGambini/workbench/tree/0.4.10",
                 "issues": "https://github.com/JohnGambini/workbench/issues"
             },
-            "time": "2018-12-01T23:51:04+00:00"
+            "time": "2018-12-04T04:57:06+00:00"
         },
         {
             "name": "workbench/db",
