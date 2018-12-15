@@ -72,12 +72,6 @@ global $dataArrays;
 			transition: top 0.5s; }
 		.contentMenu { background-color:transparent; }
 		
-		@media all and (max-width:760px) { 
-			#mainmenuItem1 { flex:1 1 50%; }
-			#mainmenuItem3 { flex:1 1 0%; }
-			#mainmenuItem4 { flex:1 1 49.5%; }
-		}
-		
 		/*--------------- CSS for specific page types -----------------------*/
 		.gallery {}
 		.parallax {}
