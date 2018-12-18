@@ -110,7 +110,7 @@ global $dataArrays;
 		 * CSS for article blocks
 		 */
 		
-		.article {
+		article {
 			background-color: white;
 			color: #000000;
 			text-shadow: 0px 0px #000000;

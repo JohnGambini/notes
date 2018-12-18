@@ -65,7 +65,7 @@ a.menuHighlightItem:hover {
 /*-----------------------------------------------------------------
  * CSS for article blocks
  */
-.article {
+article {
 	border:1px solid black
 }
 
@@ -74,7 +74,7 @@ a.linkItem {
 	color:#FFFFCC;
 }
 
-.article a.linkItem {
+article a.linkItem {
 	text-decoration:none; 
 	color:#2222BB; 
 }

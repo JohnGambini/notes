@@ -237,7 +237,8 @@ a.linkItem:hover { text-decoration:underline; text-shadow: 0px 0px #FFFFFF;	}
 /*-----------------------------------------------------------------
  * CSS for article blocks
  */
-.article {
+
+article {
 	border:1px solid red
 }
  
