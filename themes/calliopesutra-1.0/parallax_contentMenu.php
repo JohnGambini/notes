@@ -10,7 +10,7 @@ global $userObj;
 
 $menuId = 'popupContentMenu';
 ?>
-<div id="transparentContentMenu" class="transparentContentMenu">
+<div id="contentMenu" class="contentMenu">
 	<div id="mainmenuItem2" style="margin:0em 0em 0em 20px">
 			<?php set_siteNameMenu($contentObj,$userObj,'contentMenuTrigger-2') ?>
 	</div>

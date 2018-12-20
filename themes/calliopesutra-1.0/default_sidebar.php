@@ -13,9 +13,9 @@ global $dataArrays;
 
 ?>
 <div id="sidebarContainer" class="sidebarContainer">
-<div id="sidebar" class="sidebar" style="padding-top: 0.5em">
-<div style="margin:0.5em 0em 0em 0em">
+<div id="sidebar" class="sidebar" style="padding:1em">
 <?php set_siteNameMenu($contentObj,$userObj)?>
+<div style="margin:0em 1em">
 <?php set_languages($contentObj,$dataArrays->langArray) ?>
 <?php set_articleEditSidebarWidget($dbObj, $contentObj, $userObj,$sqlObject, $dataArrays)?>
 <?php set_menuList($dbObj, $contentObj, $sqlObject,$dataArrays)?>

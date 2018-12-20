@@ -13,9 +13,9 @@ global $userObj;
 
 ?>
 <div id="sidebarContainer" class="sidebarContainer">
-<div id="sidebar" class="sidebar">
-<div style="margin:0.5em 0em 0em 0em">
+<div id="sidebar" class="sidebar" style="padding:1em">
 <?php set_siteNameMenu($contentObj,$userObj)?>
+<div style="margin:0em 1em">
 <?php echo get_languagesString($contentObj,$dataArrays) ?>
 <?php set_articleEditSidebarWidget($dbObj, $contentObj, $userObj,$sqlObject, $dataArrays)?>
 	<div class="wb-dialog">

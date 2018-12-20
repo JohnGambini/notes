@@ -11,6 +11,7 @@ global $userObj;
 $menuId = 'popupContentMenu';
 ?>
 <!-- calliope-sutra-1.0 default_contentMenu -->
+<div style="width:100%; height:2em">&nbsp;</div>
 <div id="contentMenu" class="contentMenu">
 	<div id="mainmenuItem2" style="padding:0px 0px 0px 10px">
 			<?php set_siteNameMenu($contentObj,$userObj,'contentMenuTrigger-2') ?>
