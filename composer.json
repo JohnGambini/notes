@@ -1,6 +1,6 @@
 {
     "require": {
-        "workbench/core": "0.4.15"
+        "workbench/core": "0.4.16"
     },
     
     "repositories": {
