@@ -15,17 +15,15 @@ global $userObj;
 <div id="sidebarContainer" class="sidebarContainer">
 <div id="sidebar" class="sidebar" style="padding:1em">
 <?php set_siteNameMenu($contentObj,$userObj)?>
-<div style="margin:0em 1em">
 <?php echo get_languagesString($contentObj,$dataArrays) ?>
 <?php set_articleEditSidebarWidget($dbObj, $contentObj, $userObj,$sqlObject, $dataArrays)?>
 	<div class="wb-dialog">
-	  <div style="margin:1em">
+	  <div style="padding:1em">
 		<img class="leftBarImage" style="border-radius:8px" src="<?php echo CONTENTDIR . $contentObj->ownerImage ?>"/>
 		<p/>
 		<?php echo $contentObj->ownerBio ?>
 	  </div>
 	</div>
-</div>
 </div> <!-- close sidebar -->
 </div> <!-- sidebar container -->
 
