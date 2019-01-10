@@ -5,10 +5,10 @@
  * Copyright 2015 2016 2017 2018 by John Gambini
  *
  ----------------------------------------------------------------------*/
-define('APP_NAME','Notes');
+define('APP_NAME','Manin A. Bocss');
 define('SITE_NAME', 'http://' . $_SERVER['HTTP_HOST']);
-define('DATABASE', 'workbench_1');
-define('THEME','default');
+define('DATABASE', 'maninabocss');
+define('THEME','utere-verbis');
 define('SUBSITE_NAME', '/notes');
 define('WORKBENCH_FOLDER', SITE_NAME . SUBSITE_NAME . '/vendor/workbench/core');
 //define('WORKBENCH_FOLDER', SITE_NAME . '/workbench');
@@ -37,5 +37,5 @@ define('LOCALE_DIR', WORKBENCH_DIR .'/locale');
 define('DEFAULT_LOCALE', 'en_US');
 
 
-define('DEBUG_VERBOSE', false);
+define('DEBUG_VERBOSE', true);
 ?>

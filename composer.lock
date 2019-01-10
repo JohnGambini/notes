@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "84431ab6b4e8a777aea9930f647c1a5d",
+    "content-hash": "76f06b4017cbc4ff624cdb286c7096db",
     "packages": [
         {
             "name": "gettext/gettext",
@@ -131,22 +131,21 @@
         },
         {
             "name": "workbench/core",
-            "version": "0.4.17",
+            "version": "0.4.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JohnGambini/workbench.git",
-                "reference": "7ab3b72a10fbe7cd2c2382ec3a6f229f63ae3c48"
+                "reference": "94c295bc370a9b151a50084a9b23d7c1f579a05b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/7ab3b72a10fbe7cd2c2382ec3a6f229f63ae3c48",
-                "reference": "7ab3b72a10fbe7cd2c2382ec3a6f229f63ae3c48",
+                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/94c295bc370a9b151a50084a9b23d7c1f579a05b",
+                "reference": "94c295bc370a9b151a50084a9b23d7c1f579a05b",
                 "shasum": ""
             },
             "require": {
                 "gettext/gettext": "^4.6",
-                "workbench/db": "0.4.06",
-                "workbench/util": "0.4.07"
+                "workbench/db": "0.4.06"
             },
             "type": "package",
             "license": [
@@ -161,10 +160,10 @@
             "description": "A content management codebase",
             "homepage": "https://plus.google.com/+JohnGambini",
             "support": {
-                "source": "https://github.com/JohnGambini/workbench/tree/0.4.17",
+                "source": "https://github.com/JohnGambini/workbench/tree/0.4.19",
                 "issues": "https://github.com/JohnGambini/workbench/issues"
             },
-            "time": "2018-12-20T14:23:57+00:00"
+            "time": "2019-01-09T23:32:11+00:00"
         },
         {
             "name": "workbench/db",

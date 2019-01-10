@@ -1,6 +1,6 @@
 {
     "require": {
-        "workbench/core": "0.4.17"
+        "workbench/core": "0.4.19"
     },
     
     "repositories": {
@@ -12,10 +12,6 @@
         "workbench/db": {
             "type": "vcs",
             "url": "https://github.com/JohnGambini/workbench-db.git"
-        },
-        "workbench/util": {
-            "type": "vcs",
-            "url": "https://github.com/JohnGambini/workbench-util.git"
         }
         
     }
