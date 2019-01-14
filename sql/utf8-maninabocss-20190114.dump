@@ -1,0 +1,540 @@
+-- MySQL dump 10.13  Distrib 5.7.14, for Win64 (x86_64)
+--
+-- Host: localhost    Database: maninabocss
+-- ------------------------------------------------------
+-- Server version	5.7.14
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Temporary view structure for view `vw_content`
+--
+
+DROP TABLE IF EXISTS `vw_content`;
+/*!50001 DROP VIEW IF EXISTS `vw_content`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `vw_content` AS SELECT 
+ 1 AS `ID`,
+ 1 AS `guid`,
+ 1 AS `lang`,
+ 1 AS `defaultParentId`,
+ 1 AS `permalink`,
+ 1 AS `title`,
+ 1 AS `status`,
+ 1 AS `target`,
+ 1 AS `shortDescription`,
+ 1 AS `creatorId`,
+ 1 AS `ownerId`,
+ 1 AS `ownerType`,
+ 1 AS `ownerFullName`,
+ 1 AS `ownerLink`,
+ 1 AS `pageType`,
+ 1 AS `canEdit`,
+ 1 AS `hasRightbar`,
+ 1 AS `galleryImage`,
+ 1 AS `pageArgument`,
+ 1 AS `articleFile`,
+ 1 AS `articleImage`,
+ 1 AS `articleDescription`,
+ 1 AS `ogType`,
+ 1 AS `authorFullName`,
+ 1 AS `authorLink`,
+ 1 AS `dateCreated`,
+ 1 AS `dateModified`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_contentlist`
+--
+
+DROP TABLE IF EXISTS `vw_contentlist`;
+/*!50001 DROP VIEW IF EXISTS `vw_contentlist`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `vw_contentlist` AS SELECT 
+ 1 AS `itemId`,
+ 1 AS `menuId`,
+ 1 AS `menuType`,
+ 1 AS `contentId`,
+ 1 AS `lang`,
+ 1 AS `defaultParentId`,
+ 1 AS `permalink`,
+ 1 AS `title`,
+ 1 AS `sequence`,
+ 1 AS `status`,
+ 1 AS `target`,
+ 1 AS `galleryImage`,
+ 1 AS `pageType`,
+ 1 AS `ownerId`,
+ 1 AS `authorFullName`,
+ 1 AS `authorLink`,
+ 1 AS `articleImage`,
+ 1 AS `articleDescription`,
+ 1 AS `ogType`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_menulist`
+--
+
+DROP TABLE IF EXISTS `vw_menulist`;
+/*!50001 DROP VIEW IF EXISTS `vw_menulist`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `vw_menulist` AS SELECT 
+ 1 AS `menuId`,
+ 1 AS `m_lang`,
+ 1 AS `m_parentId`,
+ 1 AS `m_permalink`,
+ 1 AS `menuTitle`,
+ 1 AS `menuDescription`,
+ 1 AS `m_status`,
+ 1 AS `m_ownerId`,
+ 1 AS `m_pageType`,
+ 1 AS `m_pageArgument`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_menulist2`
+--
+
+DROP TABLE IF EXISTS `vw_menulist2`;
+/*!50001 DROP VIEW IF EXISTS `vw_menulist2`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `vw_menulist2` AS SELECT 
+ 1 AS `menuId`,
+ 1 AS `m_lang`,
+ 1 AS `m_permalink`,
+ 1 AS `menuTitle`,
+ 1 AS `menuDescription`,
+ 1 AS `m_status`,
+ 1 AS `m_ownerId`,
+ 1 AS `m_pageType`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Temporary view structure for view `vw_user`
+--
+
+DROP TABLE IF EXISTS `vw_user`;
+/*!50001 DROP VIEW IF EXISTS `vw_user`*/;
+SET @saved_cs_client     = @@character_set_client;
+SET character_set_client = utf8;
+/*!50001 CREATE VIEW `vw_user` AS SELECT 
+ 1 AS `ID`,
+ 1 AS `userBlob`,
+ 1 AS `username`,
+ 1 AS `password`,
+ 1 AS `permalink`,
+ 1 AS `fullName`,
+ 1 AS `theme`,
+ 1 AS `type`,
+ 1 AS `pageType`*/;
+SET character_set_client = @saved_cs_client;
+
+--
+-- Table structure for table `wb_articles`
+--
+
+DROP TABLE IF EXISTS `wb_articles`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_articles` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `contentId` int(11) NOT NULL,
+  `tabTitle` varchar(127) DEFAULT NULL,
+  `sequence` tinyint(4) DEFAULT NULL,
+  `articleImage` varchar(511) DEFAULT NULL,
+  `articleText` mediumtext CHARACTER SET utf8 COLLATE utf8_unicode_ci,
+  `byteCount` int(11) DEFAULT NULL,
+  `dateCreated` datetime DEFAULT CURRENT_TIMESTAMP,
+  `dateModified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `articles_idx` (`contentId`,`tabTitle`)
+) ENGINE=InnoDB AUTO_INCREMENT=92 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_articles`
+--
+
+LOCK TABLES `wb_articles` WRITE;
+/*!40000 ALTER TABLE `wb_articles` DISABLE KEYS */;
+INSERT INTO `wb_articles` VALUES (1,1,'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"margin:0em auto;text-align:center\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',159,'2018-11-14 00:45:01','2018-12-06 20:07:30'),(9,2,'l\'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"margin:0em auto;text-align:center\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',159,'2018-11-14 00:58:39','2018-12-01 20:50:11'),(12,12,'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"margin:0em auto;padding:0em 4%;text-align:center;white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n\n',197,'2018-12-01 22:28:52','2019-01-09 14:39:45'),(14,5,'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n[[gallery-widget(1)]]\n\n<div class=\"webArticle\">\n  <h2>Links</h2>\n  <hr/>\n  <a class=\"linkItem\" href=\"http://www.datasciencecentral.com/profiles/blogs/some-deep-learning-with-python-tensorflow-and-keras-1\" target=\"_blank\">Some Deep Learning with Python, TensorFlow and Keras</a><br/>\n  <a class=\"linkItem\" href=\"http://trainings.analyticsvidhya.com/\" target=\"_blank\">Analytics Vidhya</a><br/>\n  <a class=\"linkItem\" href=\"http://mpatacchiola.github.io/blog/2018/12/28/dissecting-reinforcement-learning-8.html\" target=\"\">Dissecting Reinforcement Learning-Part.8</a><br/>\n</div>\n',787,'2018-12-01 22:29:31','2019-01-11 10:08:25'),(16,14,'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"margin:0em auto;text-align:center\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n[[gallery-widget(2)]]\n[[gallery-widget(3)]]\n\n',207,'2018-12-01 22:32:53','2018-12-09 23:29:50'),(18,11,'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:64em; margin:0em auto; padding:0em 4%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n\n',214,'2018-12-01 22:34:40','2019-01-09 13:52:16'),(20,15,'article',1,NULL,'\n[[article-header]]\n',22,'2018-12-01 22:36:30','2018-12-01 22:37:00'),(22,13,'article',1,NULL,'\n[[article-header]]\n',22,'2018-12-01 22:38:46','2018-12-01 22:39:04'),(24,6,'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',210,'2018-12-07 23:27:40','2018-12-07 23:27:51'),(26,17,'l\'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"margin:0em auto; padding:0em 2%; text-align:center; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',198,'2018-12-07 23:28:18','2019-01-09 14:46:01'),(28,18,'l\'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',212,'2018-12-07 23:28:44','2018-12-07 23:28:54'),(30,19,'l\'article',1,NULL,'\n[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',212,'2018-12-07 23:29:19','2018-12-07 23:29:26'),(32,21,'l\'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',210,'2018-12-07 23:37:19','2018-12-07 23:37:26'),(34,22,'l\'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',210,'2018-12-07 23:37:42','2018-12-07 23:37:49'),(36,23,'l\'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',210,'2018-12-07 23:38:04','2018-12-07 23:38:10'),(38,20,'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:54em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n[[gallery-widget(1)]]\n',204,'2018-12-07 23:51:39','2018-12-24 22:14:20'),(39,25,'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:56em; margin:0em auto; padding:0em 2%; text-align:left; white-space:pre-wrap\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n\n',212,'2018-12-09 10:34:35','2018-12-11 20:43:24'),(40,9,'article',1,NULL,'[[article-header]]\n[[gallery-widget(1)]]\n',43,'2019-01-09 09:40:13','2019-01-09 09:40:39'),(42,10,'article',1,NULL,'\n[[article-header]]\n[[gallery-widget(1)]]',43,'2019-01-09 09:45:09','2019-01-09 09:45:34'),(43,27,'article',1,NULL,'[[article-header]]\n',20,'2019-01-09 11:52:00','2019-01-09 11:52:14'),(45,28,'article',1,NULL,'[[article-header]]',18,'2019-01-09 11:52:29','2019-01-09 11:52:43'),(47,31,'l\'article',1,NULL,'[[article-header]]\n',20,'2019-01-09 11:53:04','2019-01-09 11:53:16'),(49,29,'article',1,NULL,'[[article-header]]\n',20,'2019-01-09 11:53:37','2019-01-09 11:53:48'),(51,30,'article',1,NULL,'[[article-header]]\n',20,'2019-01-09 11:54:07','2019-01-09 11:54:19'),(53,32,'l\'article',1,NULL,'[[article-header]]\n',20,'2019-01-09 11:54:40','2019-01-09 11:54:54'),(65,53,'article',1,NULL,'<p/>\n<div class=\"webArticle fontSpecSmall\">\n  <table class=\"rightBlock\">\n	<tr>\n	  <td><img src=\"[[content-dir]]/math/resources/binomial-cubed.png\"/></td>\n	</tr>\n	<tr>\n	  <td class=\"fontSpecVerySmall\"><b>A geometric interpretation</b> of the algebraic identity \\((a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3.\\) Given a cube with side lengths \\(a+b,\\) its total volume can be descriped as \\((a+b)^3.\\) Its total volume can also be described as a sum of the volume of eight blocks. One block having volume \\(a^3,\\) one with volume \\(b^3,\\) three with volume \\(a^2b,\\) and three with volume \\(ab^2.\\)\n	  </td>\n	</tr>\n  </table>\n\n  <div>\n	<h3>Binomial Product Identities:</h3>\n	<ul style=\"list-style-type:none\">\n	  <li>\\( (a+b)^2 = a^2 + 2ab + b^2 \\)</li>\n	  <li>\\( (a-b)^2 = a^2 - 2ab + b^2 \\)</li>\n	  <li>\\( (a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3 \\)</li>\n	  <li>\\( (a-b)^3 = a^3 - 3a^2b + 3ab^2 - b^3 \\)</li>\n	  <li>\\( (a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4\\)</li>\n	  <li>\\( (a-b)^4 = a^4 - 4a^3b + 6a^2b^2 - 4ab^3 + b^4\\)</li>\n	</ul>\n	<p/>\n  </div>\n  <div>\n	The general form given by:\n	<p/>\n  \\((a+b)^n = \\displaystyle{\\sum_{k=0}^n} \\binom n k a^{n-k} b^k\\)\n  \\(= \\binom n 0 a^n + \\binom n 1 a^{n-1} b + \\binom n 2 a^{n-2} b^2 + ... + \\binom n n b^n\\)\n  where the binomial coefficient, n choose k,  \\(\\displaystyle \\binom n k ,\\) is defined as:\n	\\[\\cfrac {n!} {(n-k)!k!}\\]\n	<p/>\n  </div>\n  <hr/>\n</div>\n\n<div class=\"newspaper\">\n  <div>\n  <h3>Factoring Identities:</h3>\n	<p/>\n	<ul style=\"list-style-type:none\">\n	  <li>\\(a^2-b^2 = (a-b)(a+b)\\)</li>\n	  <li>\\(a^3-b^3 = (a-b)(a^2 + ab + b^2)\\)</li>\n	  <li>\\(a^3+b^3 = (a+b)(a^2 - ab + b^2)\\)</li>\n	  <li>\\(a^4-b^4 = (a^2-b^2)(a^2+b^2) = (a-b)(a+b)(a^2+b^2)\\)</li>\n	  <li>\\(a^5 - b^5 = (a-b)(a^4 + a^3b + a^2b^2 + ab^3 + b^4)\\)</li>\n	  <li>\\(a^5 + b^5 = (a+b)(a^4 - a^3b + a^2b^2 - ab^3 + b^4)\\)</li>\n	</ul>\n	<p/>\n  The general form for differences is given by:\n  <p/>\n  <ul style=\"list-style-type:none\">\n	<li>\\(a^n - b^n = (a-b)(a^{n-1} + a^{n-2}b + a^{n-3}b^2 + \\dots + a^{n-n}b^{n-1})\\)</li>\n  </ul>\n  <p/>\n  The general form for sums is only valid when the exponent is an odd integer and is given by:\n  <p/>\n  <ul style=\"list-style-type:none\">\n	<li>\\(a^n + b^n = (a+b)(a^{n-1} - a^{n-2}b + a^{n-3}b^2 - \\dots + a^{n-n}b^{n-1})\\)</li>\n  </ul>\n  <p/>\n	<hr style=\"margin:0em 2%\"/>\n  </div>\n\n  <div>\n	<p/>\n	<h3>Exponents and Logarithms</h3>\n	The expression \\(a^n\\) simply means to multiply \\(a\\) n times. The expression \\(\\log_b = x\\) means: \\(b\\) raised to what power will equal \\(x.\\) Alternativley one can write: if \\(y=\\log_b x\\) then \\(b^y = x.\\) For example \\(\\log_{10} 100 = 2.\\) When the base \\(b\\) is 10 it\'s often omitted and we write \\(\\log 100 = 2.\\) When the base is the number \\(e\\) (Euler\'s number) we write, for example, \\(\\ln e = 1.\\) In all other cases the base \\(b\\) is present as a subsript as demonstrated above. For example \\(\\log_3 27 = 3.\\)  \n	<table style=\"width:100%\">\n	  <tr>\n		<td style=\"padding:0.5em\"><b>Exponent Properties</b></td>\n		<td style=\"padding:0.5em\"><b>Logarithm Properties</b></td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(a^1 = a\\)</td>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(\\log_b (nm) = \\log_b n + \\log_b m\\)</td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(a^{n+1} = a^n \\cdot a\\)</td>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(\\log_b \\frac n m = \\log_b n - \\log_b m\\)</td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(a^{nm} = a^n + a^m\\)</td>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(\\log_b x^p = p \\log_b x\\)</td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(a^0 = 1\\)</td>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(\\log_b \\sqrt[p]{x} = \\frac {\\log_b x} p \\)</td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(a^{-1} = \\frac 1 {a^n}\\)</td>\n		<td class=\"fontSpecMedium\" style=\"padding:0.5em\">\\(\\log_b x = \\frac {\\log_k x} {\\log_k b}\\)</td>\n	  </tr>\n	</table>\n	<p/>\n	<hr style=\"margin:0em 2%\"/>\n	<p/>\n  </div>\n  \n  <div>\n	<h3>The Quadratic Formula</h3>\n	<table class=\"rightBlock\">\n	  <tr>\n		<td><a class=\"linkItem\" href=\"[[content-dir]]/math/resources/quadratic-formula.png\" target=\"_blank\"><img src=\"[[content-dir]]/math/resources/quadratic-formula.png\"/></a></td>\n	  </tr>\n	  <tr>\n		<td></td>\n	  </tr>\n	</table>\n	A univariate quadratic polynomial has the form \\(y = ax^2 + bx + c.\\) Often it\'s neccessary to find the <em>roots</em> of a polynomial - that is, solve for \\(x\\) when \\(y\\) is zero. Likewise, it\'s possible to find the \\(x\\) position for the intersection(s) of a line and a parabola by putting the equality \\(ax^2 + bx + c = mx + d\\) into the form stated above - i.e. \\(ax^2 + (b+m)x + (c+d) = 0.\\) The closed form  solution known as the quadratic equation can be used to solve for the roots of any arbitrary quadratic formula - that is, it can be used to solve for the \\(x\\)s for any formual that can be put into the form \\(ax^2 + bx + c = 0.\\) \n	\\[x = b \\pm \\frac {\\sqrt{b^2 - 4ac}} {2a}\\]\n	The term under the radical \\(b^2 - 4ac\\) is called the <em>discriminant</em> \\(D.\\) It\'s value determines the type of roots the equation has.\n	<p/>\n	<ul>\n	  <li>\\(D \\lt 0\\) The equation has no real roots - that is, the parabola does not intersect the \\(x\\) axis. If the field is \\(\\mathbb{C}\\) the solutions are complex conjugates.</li>\n	  <li>\\(D = 0\\) The equation has one real root. For example the equation \\(x^2 +0x + 0 = 0\\) has on real root of multiplicity two at \\(x = 0\\) where the parabola\'s vertex touches the \\(x\\) axis.</li>\n	  <li>\\(D \\gt 0\\) The equation has two real roots.</li>\n	</ul>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n  </div>\n  \n</div> <!-- close webArticle -->\n',6349,'2019-01-09 22:52:56','2019-01-12 17:34:13'),(66,54,'article',1,NULL,'<p/>\n<div class=\"newspaper\" style=\"margin:0em 12%\">\n  <div><h3>Pythagorean Identities</h3>\n	<ul>\n	  <li type=\"none\">\\( cos^2 \\theta + sin^2 \\theta = 1 \\)</li>\n	  <li type=\"none\">\\( 1 + tan^2 \\theta = sec^2 \\theta \\)</li>\n	  <li type=\"none\">\\( cot^2 \\theta + 1 = csc^2 \\theta \\)</li>\n	</ul>\n	<p/>\n  </div>\n  <div>\n	<h3>Parity</h3>\n	<ul>\n	  <li type=\"none\">\\( sin(- \\theta ) = -sin \\space \\theta \\)</li>\n	  <li type=\"none\">\\( cos(- \\theta ) = cos \\space \\theta \\)</li>\n	  <li type=\"none\">\\( csc(- \\theta ) = csc \\space \\theta \\)</li>\n	  <li type=\"none\">\\( sec(- \\theta ) = sec \\space \\theta \\)</li>\n	  <li type=\"none\">\\( tan(- \\theta ) = -tan \\space \\theta \\)</li>\n	  <li type=\"none\">\\( cot(- \\theta ) = -cot \\space \\theta \\)</li>\n	</ul>\n	<p/>\n  </div>\n\n  <div>\n	<h3>Co-Function Identities:</h3>\n	<ul>\n	  <li type=\"none\">\\( sin(\\frac {\\pi} 2 - \\theta ) = cos \\space \\theta \\)</li>\n	  <li type=\"none\">\\( cos(\\frac {\\pi} 2 - \\theta ) = sin \\space \\theta \\)</li>\n	  <li type=\"none\">\\( csc(\\frac {\\pi} 2 - \\theta ) = sec \\space \\theta \\)</li>\n	  <li type=\"none\">\\( sec(\\frac {\\pi} 2 - \\theta ) = cos \\space \\theta \\)</li>\n	  <li type=\"none\">\\( tan(\\frac {\\pi} 2 - \\theta ) = cot \\space \\theta \\)</li>\n	  <li type=\"none\">\\( cot(\\frac {\\pi} 2 - \\theta ) = tan \\space \\theta \\)</li>\n	</ul>\n	<p/>\n  </div>\n\n  <div>\n  <h3>Sum / Difference Formulas:</h3>\n	<ul>\n	  <li type=\"none\">\\( sin( \\theta \\pm \\phi ) = sin \\space \\theta \\cdot cos \\space \\phi \\pm cos \\space \\theta \\cdot sin \\space \\phi \\)\n	  </li>\n	  <li type=\"none\">\\( cos( \\theta \\pm \\phi ) = cos \\space \\theta \\cdot cos \\space \\phi \\mp sin \\space \\theta \\cdot sin \\space \\phi \\)\n	  </li>\n	  <li type=\"none\">\\( tan( \\theta \\pm \\phi ) = \\dfrac {tan \\space \\theta \\pm tan \\space \\phi} {1 \\mp tan \\space \\theta \\cdot tan \\space \\phi } \\)\n	  </li>\n	</ul>\n	<p/>\n  </div>\n  \n  <div>\n	<h3>Double Angle Formulas:</h3>\n	<ul>\n	  <li type=\"none\">\\( sin( 2 \\theta ) = 2  sin \\space \\theta  cos \\space \\theta \\)</li>\n	  <li type=\"none\">\\( cos( 2 \\theta ) = cos^2 \\theta - sin^2 \\theta \\)</li>\n	  <li type=\"none\">\\( \\qquad \\qquad = 2 cos^2 \\theta - 1 \\)</li>\n	  <li type=\"none\">\\( \\qquad \\qquad = 1 - 2 sin^2 \\theta \\)</li>\n	  <li type=\"none\">\\( tan( 2 \\theta ) = \\dfrac { 2 \\space tan \\space \\theta } {1 - tan^2 \\theta } \\)</li>\n	</ul>\n	<p/>\n  </div>\n  <div>\n	<h3>Power Reducing / Half Angle Formulas:</h3>\n	<ul>\n	  <li type=\"none\">\\( sin^2 \\theta = \\dfrac {1 - cos(2 \\theta)} 2 \\)</li>\n	  <li  type=\"none\">\\( cos^2 \\theta = \\dfrac {1 + cos(2 \\theta)} 2 \\)</li>\n	  <li  type=\"none\">\\( tan^2 \\theta = \\dfrac {1 - cos(2 \\theta)} {1 + cos(2 \\theta)} \\)</li>\n	</ul>\n	<p/>\n  </div>\n  <div>\n	<h3>Product-to-Sum Formulas:</h3>\n	<ul>\n	  <li type=\"none\">\\( sin \\space \\theta sin \\space \\phi = \\frac 1 2 [ cos(\\theta - \\phi) - cos(\\theta + \\phi)] \\)</li>\n	  <li type=\"none\">\\( cos \\space \\theta cos \\space \\phi = \\frac 1 2 [ cos(\\theta - \\phi) + cos(\\theta + \\phi)] \\)</li>\n	  <li type=\"none\">\\( sin \\space \\theta cos \\space \\phi = \\frac 1 2 [ sin(\\theta + \\phi) + sin(\\theta - \\phi)] \\)</li>\n	  <li type=\"none\">\\( cos \\space \\theta sin \\space \\phi = \\frac 1 2 [ sin(\\theta + \\phi) - sin(\\theta - \\phi)] \\)</li>\n	</ul>\n	<p/>\n  </div>\n\n</div> <!-- close newspaper -->\n		',3560,'2019-01-10 21:19:10','2019-01-10 21:33:09'),(86,55,'article',1,NULL,'<div class=\"fontSpecVerySmall\" style=\"text-align:left;max-width:64em;margin:0em auto;padding:0em 1em\">[[article-description]]</div>\n<p/>\n<div class=\"newspaper fontSpecSmall\">\n  <div class=\"firstCharacter\">\n	Here is a graph of \\(x^2\\) (green) and it\'s antiderivative \\(x^3/3\\) (red). We can think of the integrand \\(x^2\\) as the curve that defines the slope of the antiderivative \\(x^3/3\\) at every point along the \\(x\\) axis. \n	<table class=\"leftBlock\">\n	  <tr>\n		<td><p/><img src=\"[[content-dir]]/math/single-var-calc/differs-by-a-constant.png\"/></td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecVerySmall\">\n		  <div class=\"fontSpecSmall\">\\[\\int x^2 dx = x^3 / 3 + C\\]</div>\n		  The integrand \\(x^2\\) and it\'s antiderivative \\(x^3/3.\\) The antiderivative can be translated along the \\(y\\) axis in either direction without affecting it\'s legitimacy as an antiderivative. We denote this by writing \\(x^3/3 + C.\\) The antiderivative, in this form, is really a set of functions that we call <em>the general antiderivative</em> and these functions differ from one another only by a constant.\n		</td>\n	  </tr>\n	</table>\n	Note that where the slope of \\(x^3/3\\) is positive, the value of \\(x^2\\) is positive and where the slope of \\(x^3/3\\) is zero, the value of \\(x^2\\) is zero.\n	<p/>\n	The value of \\(x^2\\) only tells us about the slope of \\(x^3/3.\\) It doesn\'t contain any information about whether the antiderivative is translated, up or down, along the \\(y\\) axis. As an example, \\(x^3/3 + 1\\) and \\(x^3/3 - 1\\) are equally valid antiderivatives of \\(x^2.\\) We can indicate this fact by adding an arbitrary constant \\(C\\) to the antiderivative resulting in \\(x^3/3 + C.\\) We do this and we say that the resulting antiderivative expresses a set of functions that differ by a constant. We call this set <em>the general antiderivative</em>. We can resolve the general antiderivative to a specific function if we have an initial condition which essentially gives us the value of the arbitrary constant \\(C\\) or we can get a numerical answer for the antiderivative if we have <a class=\"linkItem\" href=\"http://en.wikipedia.org/wiki/Limits_of_integration\" target=\"_blank\">limits of integration</a> on the integral. In the second case, the result is called <em>the definite integral</em>. It\'s value represents the area under the curve of the integrand with low and high boundaries specified on the x-axis by the limits of integration. It turns out that many values in physics and engineering can be described as the area under a curve and a numerical answer can be arived at by determining the value of the definite integral. We\'ll examine the definite integral in more detail in a latter article. In this article I just want to demonstrate some methods for determining what the antiderivative of a given function, the integrand, is.\n	<p/>\n  </div>\n  <div>\n	<h3>The general rules for anti-differentiation</h3>\n	Integration is a <a class=\"linkItem\" href=\"http://mathworld.wolfram.com/LinearOperator.html\" target=\"_blank\">linear operation</a>. As a result, integrals can be summed and multiplied by a constant.\n	<div style=\"border:1px solid black;margin:1em;padding:1em\">\n	  <h3>Summation</h3>\n	  <p/>\n	  <div style=\"width:100%;padding:0em auto;text-align:center\">\n	  \\( \\displaystyle \\int (f(x) + g(x)) \\space dx \\space \\) = \\(\\displaystyle \\int f(x) \\space dx + \\int g(x) \\space dx \\)\n	  </div>\n	  <p/>\n	  <h3>Multiplication by a constant</h3>\n	  \\[ \\int c f(x) \\space dx = c \\int f(x) \\space dx \\] \n	</div>\n  </div>\n  <div>\n	<h3>The inverse power rule</h3>\n	Integration is the inverse operation to differentiation. If integration is going to be useful to us we need to know how to take the integral of a power. If we know the <a class=\"linkItem\" href=\"#\"><em>power rule</em></a> for differentiation then we can guess at what the inverse operation of the power rule is. For example, the derivative of \\(x^2\\) is \\(2x\\) using the power rule. Likewise, the derivative of \\(x^3\\) is \\(3x^2.\\) If I wanted to guess at the inverse operation to this, I might try adding \\(1\\) to the exponent and dividing by the new power. If I made this guess, I would be correct.\n	<p/>\n	<div style=\"border:1px solid black;margin:1em;padding:1em\">\n	  <h3>The inverse power rule</h3>\n	  \\[ \\int x^n \\space dx = \\cfrac {x^{n+1}} {n+1} + C \\quad \\quad n \\ne -1 \\] \n	</div>\n	<p/>\n	The power rule and the inverse power rule are <em>methods</em>. They don\'t tell us anything about what derivation or integration actually is. They simply provide a reliable method for performing these operations.\n	<p/>\n  </div>\n  <div>\n  	<h3>The integral of \\(\\mathbf{1/x}\\)</h3>\n	We\'ll address next the special integral \\(1/x.\\) Notice in the definition for the inverse power rule, we stated it with the caveat that \\(n\\) must not equal \\(-1.\\) If we think about it we relize that if \\(n = -1\\) we end up with zero in the denominator.\n	<table class=\"leftBlock\">\n	  <tr>\n		<td><img src=\"[[content-dir]]/math/single-var-calc/int-of-1-over-x.png\"/></td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecVerySmall\">\n		  <p/>\n		  Using the inverse power rule to determine the antiderivative of \\(1/x\\) doesn\'t work because we\'ll end up with zero in the denominator of the resulting expression. None the less, we know that there\'s a legitimate antiderivative for \\(1/x\\) because it\'s graph is smooth and continuous.\n		</td>\n	  </tr>\n  	</table>\n	 In order to understand this one exception to the inverse power rule we\'ll resort to a graphical explanation.\n	<p/>\n	In the image to the left, we have a graph of the integrand \\(1/x\\) or \\(x^{-1}\\) (red). The antiderivative of \\(x^{-1}\\) must have a slope that\'s equal to the value of \\(x^{-1}\\) at every point along the \\(x\\) axis. It turns out that the curve \\(ln(x)\\) (green) satisfies this condition.\n	<p/>\n	There are ways to verify this analytically. The methods that I\'ve seen involve proving the opposite, that the derivative of \\(~ ln(x)\\) is \\( ~ x^{-1}\\) and then summoning the <a class=\"linkItem\" href=\"http://en.wikipedia.org/wiki/Fundamental_theorem_of_calculus\" target=\"_blank\">fundamental theorem of calculus</a> to prove that the inverse operation, integration of \\(~ x^{-1},\\) results in \\(~ ln(x).\\) But for the purposes of this article, I\'ll simply state that the integral of \\(~ 1/x\\) is \\(~ ln(x)\\) and that the graph of these two functions verifies it.\n	<p/>\n  </div>\n  <div>\n	<table class=\"rightBlock\">\n	  <tr>\n		<td><img src=\"[[content-dir]]/math/single-var-calc/int-of-1-over-x+C.png\"/></td>\n	  </tr>\n	  <tr>\n		<td class=\"fontSpecVerySmall\">    \n		</td>\n	  </tr>\n	</table>\n	<p/>\n	It\'s important to note that, like other antiderivatives, the <em>general antiderivative</em> of \\(~ 1/x\\) is \\(~ ln(x) + C\\) and like other antiderivatives it makes no difference if the antiderivative is translated up or down in the vertical direction. It\'s still a legitimate antiderivative to \\(~ 1/x.\\) That is, the value of the curve \\(~ 1/x\\) still defines the slope of the antiderivative \\(ln(x)\\) at every point along the \\(~ x\\) axis regardless of whether the antiderivative is moved up or down along the \\(~ y\\) axis.\n	<div style=\"border:1px solid black;margin:1em;padding:1em\">\n	  <h3>Antidifferentiation formula for 1/x</h3>\n	  <img class=\"rightBlock\" src=\"[[content-dir]]/math/single-var-calc/ln-of-x.png\"/>\n	  \\[ \\int \\cfrac 1 x \\space dx = ln|x| + C \\]\n	  <b>Note:</b> We use absolute value signs for \\(ln|x|\\) since \\(ln(x) = ln(-x).\\) We do this so that we can avoid problems with the singularity that occurs at \\(~ln(0).\\) That is, in general, it\'s just good practice to write \\(~ln|x|\\) instead of \\(~ln(x)\\) or \\(~ln \\space x.\\)\n	</div>\n	<p/>\n  </div>\n  <div>\n	<h3>Putting it all together (Anti-differentiation of a Polynomial)</h3>\n	One way to illustrate how rules for anti-differentiation can work together is by an example. In this example we integrate a relativley simple polynomial.\n	<p/>\n	Let \\(f(x) = x^2/2 - x/2 + 3/x \\space dx.\\) &nbsp; Then the antiderivative of \\(f(x)\\) is:\n	<div class=\"listBlocks\">\n	  <div>\\(\\displaystyle \\int \\cfrac {x^2} 2 \\space dx \\space - \\int \\cfrac {x} 2 \\space dx \\space + \\int \\cfrac 3 x \\space dx\\)</div>\n	  <div style=\"margin:0em 1em;flex-grow:1\">the sum rule<p/></div>\n	</div>\n	<div class=\"listBlocks\">\n	  <div>\\(\\displaystyle = \\cfrac 1 2 \\int x^2 \\space dx \\space - \\cfrac 1 2 \\int x \\space dx \\space + 3 \\int x^{-1} \\space dx\\)</div>\n	  <div style=\"margin:0em 1em;flex-grow:1\">the multiplication by a constant rule<p/></div>\n	</div>\n	<div class=\"listBlocks\">\n	  <div>\\(\\displaystyle = \\cfrac 1 6 x^3 \\space - \\cfrac 1 4 x^2 \\space + 3 ln(x) + C\\)</div>\n	  <div style=\"margin:0em 1em;flex-grow:1\">the inverse power rule and the \\(1/x\\) rule<p/></div>\n	</div>\n	<p/>\n  </div>\n  <div>\n	<h3>The Differential and the Variable of Integration</h3>\n	\\[ \\underbrace{\\int}_{integral \\space sign} \\quad \\underbrace{a -\\sqrt{x}}_{integrand} \\quad \\space \\underbrace{dx}_{differential} \\]\n	In each of our examples we\'ve included the symbol \\(dx.\\) This is called the differential and it stands for a minuscule change (i.e. infintesimal change) in the variable of integration. I\'ll write about infintesimals in a latter article but for now it\'s simply important to note that the infintesimal indicates the variable of integration. If there are other variables in the integrand they should be treated as constants.\n  	<p/>\n  </div>\n  <div>\n	<h3>And Finally...</h3>\n	There are additional topics to address regarding anti-differentiation. For example, I didn\'t cover anti-differentiation of trig functions such as \\(\\sin \\theta,\\) or \\(\\cos \\theta,\\) or <a class=\"linkItem\" href=\"http://en.wikipedia.org/wiki/Exponential_function\" target=\"_blank\">exponentials</a> which are functions of the form \\(f(x) = b^x\\). Those are topics for later articles.\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n	<br/>\n  </div>\n</div> <!-- close newspaper -->\n',10372,'2019-01-10 23:48:06','2019-01-12 17:41:36'),(87,55,'problem sets',2,NULL,'<div class=\"fontSpecVerySmall\" style=\"text-align:left;width:75%;margin:0em auto\">[[article-description]]</div>\n<p/>\n<div class=\"newspaper fontSpecMedium\">\n  <div>\n	Find the anti-derivative for the following polynomials. The differential of the independant variable (e.g. dx or dt) indicates the variable of integration. Keep in mind that when integrating a constant you simply add the variable of integration to the integrand yeilding the antiderivative. For example, \\(F(x) = \\int m \\space dx = mx + C.\\)\n	<p/>\n	<ol>\n	  <li>\\(\\displaystyle \\int x^2 \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int 3x^3 \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int 3 - x \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int \\cfrac {x^3} 2 + x^2 - \\cfrac x 3 \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int \\lambda \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int \\lambda \\space dt\\)</li>\n	  <li>\\(\\displaystyle \\int \\lambda \\space d\\lambda\\)</li>\n	  <li>\\(\\displaystyle \\int at + v_0 \\space dt\\)</li>\n	</ol>\n	<p/>\n  </div>\n  <div>\n	For the following it\'s important to know how to re-write roots as exponents.\n	<p/>\n  	<ol start = \"9\">\n	  <li>\\(\\displaystyle \\int x^3 - 3 ~ \\sqrt{x} \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int y^{2/3} \\space dy\\)</li>\n	  <li>\\(\\displaystyle \\int x^3 - 3 ~ \\sqrt[3]{x} \\space dx\\)</li>\n  	</ol>\n  	<p/>\n  </div>\n  <div>\n	Here are some problems that use the formula for integrating \\(1/x.\\) It will be neccessary to rewrite the fractions so that you can use the formula.\n	<p/>\n	<ol start=\"12\">\n	  <li>\\(\\displaystyle \\int \\cfrac {3+x} x \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int \\cfrac {3+2x^{-1}} x \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int \\cfrac {3+3x} {x^2} \\space dx\\)</li>\n	</ol>\n	<p/>\n  </div>\n  <div>\n	On these, try using polynomial long division. Then find the antiderivative for the resulting polynomial.\n	<p/>\n	<ol start=\"15\">\n	  <li>\\(\\displaystyle \\int \\cfrac {x^3 + 3x - 2x^2 - 6} {x - 2} \\space dx\\)</li>\n	  <li>\\(\\displaystyle \\int \\cfrac {3x - 2x^{-1} - 5} {x - 2} \\space dx\\)</li>\n	</ol>\n	<p/>\n  </div>\n  <br/>\n  <br/>\n  <br/>\n  \n</div>\n',2222,'2019-01-10 23:48:17','2019-01-11 10:16:25'),(91,34,'article',1,NULL,'[[article-header]]\n<div class=\"fontSpecVerySmall\" style=\"max-width:66em;margin:0em auto;padding:0em 8%\">[[article-description]]</div>\n<p/>\n[[gallery-widget(1)]]\n',169,'2019-01-11 10:40:51','2019-01-11 10:42:37');
+/*!40000 ALTER TABLE `wb_articles` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_content`
+--
+
+DROP TABLE IF EXISTS `wb_content`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_content` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `guid` varchar(37) COLLATE utf8_unicode_ci NOT NULL,
+  `lang` varchar(6) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `defaultParentId` int(11) DEFAULT NULL,
+  `permalink` varchar(255) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `title` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `status` varchar(63) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `target` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `shortDescription` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `creatorId` int(11) DEFAULT NULL,
+  `ownerId` int(11) DEFAULT NULL,
+  `pageType` varchar(31) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `pageArgument` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `galleryImage` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `articleFile` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `articleImage` varchar(511) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `articleDescription` text COLLATE utf8_unicode_ci,
+  `ogType` varchar(31) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `authorFullName` varchar(127) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `authorLink` text COLLATE utf8_unicode_ci,
+  `dateCreated` datetime DEFAULT CURRENT_TIMESTAMP,
+  `dateModified` datetime DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `idx_permalink` (`permalink`)
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_content`
+--
+
+LOCK TABLES `wb_content` WRITE;
+/*!40000 ALTER TABLE `wb_content` DISABLE KEYS */;
+INSERT INTO `wb_content` VALUES (1,'56f7eb4f-937a-4df3-8674-36d2c8da20e4','en',0,'/en','Home','Public','_self','Home page -english',NULL,1,'front-parallax','','/blank.png','','[[content-dir]]/man-in-box-edges.png','Welcome to Manîn A Bocss.\r\n','website','','','2018-11-13 23:46:22','2019-01-09 13:41:07'),(2,'72e50feb-9546-4259-8ad3-0cced9fdba6c','fr',0,'/fr','Accueil','Public','_self','Accueil - françias',NULL,1,'front-parallax','','/blank.png','','[[content-dir]]/man-in-box-edges.png','Bienvenue à Manîn A Bocss.','website','','','2018-11-13 23:48:35','2019-01-10 13:08:20'),(3,'84cf6327-53a9-46af-ad81-4c9b6de34d1e','en',-1,'/en/84cf6327-53a9-46af-ad81-4c9b6de34d1e','Main Menu','Public','_self','Main Menu - English',NULL,1,'menu','','','',NULL,NULL,NULL,NULL,NULL,'2018-11-14 00:09:07','2018-11-14 00:09:07'),(4,'da223add-1722-43bd-94da-81950f321721','fr',-1,'/fr/da223add-1722-43bd-94da-81950f321721','Menu principal','Public','_self','Menu principal - françias',NULL,1,'menu','','','',NULL,NULL,NULL,NULL,NULL,'2018-11-14 00:09:48','2018-11-14 00:09:48'),(5,'1579ed41-9fcf-42c2-8736-14ecc1d1ba1e','en',1,'/en/data-science-and-machine-learning','Data Science and Machine Learning','Public','','Data Science and Machine Learning main page',NULL,1,'front-parallax','','/data-science-bw.png','','[[content-dir]]/data-science-bw.png','','website','','','2018-11-14 00:32:47','2019-01-09 17:35:30'),(6,'eeba9bfb-b207-478e-b034-a9dc352d3771','fr',2,'/fr/data-science-and-machine-learning','La science des données et apprentissage automatique','Public','_self','La science des données et apprentissage automatique',NULL,1,'front-parallax','','/data-science-bw.png','','[[content-dir]]/data-science-bw.png','','website','','','2018-11-14 00:57:38','2018-12-09 04:04:03'),(7,'3ea5bfeb-3b4b-4d0b-b4ad-c21310890904','en',1,'/en/featured-articles','Featured Articles','Public','','Featured Articles - English',NULL,1,'featured','','/blank.png','',NULL,NULL,NULL,NULL,NULL,'2018-11-14 01:11:04','2018-11-14 01:11:04'),(8,'aa312635-fa86-491a-b514-2d4603735feb','fr',2,'/fr/featured-articles','Articles en vedette','Public','','Articles en vedette',NULL,1,'featured','','/blank.png','',NULL,NULL,NULL,NULL,NULL,'2018-11-14 01:14:17','2018-11-14 01:14:17'),(9,'55f9390f-c455-4938-8272-ce17e123d274','en',1,'/en/usr','User Profiles','Public','_self','User Profiles',NULL,1,'front-parallax','','/blank.png','','[[content-dir]]/profiles.png','Manin A. Bocss user profile pages','website','','','2018-11-14 01:48:11','2019-01-09 14:42:57'),(10,'109709dc-a2ca-41d0-ae0a-795e825a88e2','fr',2,'/fr/usr','Des profils d\'utilisateurs','Public','_self','Des profils d\'utilisateurs',NULL,1,'front-parallax','','/profiles.png','','[[content-dir]]/profiles.png','','website','','','2018-11-14 23:53:02','2019-01-09 14:43:43'),(11,'854ca4ea-dc3c-4c7b-a27b-8d1259894d3d','en',1,'/en/math','Mathematics','Public','_self','Mathematics - English',NULL,1,'front-parallax','','/mathematics.jpg','','[[content-dir]]/mathematics.jpg','\"Mathematizing\" may well be a creative activity of man, like language or music, of primary originality, whose historical decisions defy complete objective rationalization. -- Herman Weyl --','website','','','2018-11-17 18:04:51','2019-01-10 03:26:07'),(12,'a18f5922-f6f4-4c3d-aff7-f16279495237','en',1,'/en/computer-science','Computer Science','Public','','Computer Science',NULL,1,'front-parallax','','/computer-science.png','','[[content-dir]]/computer-science.png','Computer science is no more about computers than astronomy is about telescopes.\r\n-- Edsger Dijkstra --\r\n','website','','','2018-12-01 20:54:36','2019-01-09 19:40:04'),(13,'ac9e711c-eb42-4b66-ac64-57bc979ffbd3','en',1,'/en/physics','Physics','Public','','Physics',NULL,1,'front-parallax','','/physics.png','','[[content-dir]]/physics.png','','website','','','2018-12-01 21:02:09','2018-12-02 03:38:23'),(14,'8969324d-a60c-432b-b306-05a812186597','en',1,'/en/diy','DIY','Public','_self','DIY',NULL,1,'front-parallax','','/diy-bw_0.png','','[[content-dir]]/diy-bw_0.png','','website','','','2018-12-01 22:00:12','2018-12-07 01:51:27'),(15,'a786246f-dbaa-4719-90b0-408efa371711','en',1,'/en/philosophy','Philosophy','Public','','Philosophy',NULL,1,'front-parallax','','/philosophy.png','','[[content-dir]]/philosophy.png','','website','','','2018-12-01 22:03:42','2018-12-02 03:35:56'),(16,'3acaa65a-d64c-4c7e-8914-be3acf3f65cb','en',1,'/en/user-admin','User Administration','Administrators','_self','User Administration',NULL,1,'user-admin','','/burning-giraffes-and-telephones.png','','[[content-dir]]/burning-giraffes-and-telephones.png','','website','Salvador Dali','','2018-12-01 22:14:24','2018-12-06 12:33:49'),(17,'d86938ba-372f-4e91-b364-642363f0bbb0','fr',2,'/fr/computer-science','La science de l\'informatique','Public','_self','La science de l\'informatique',NULL,1,'front-parallax','','/computer-science.png','','[[content-dir]]/computer-science.png','La science de l\'informatique concerne autant l\'ordinateur comme l\'astronomie, le télescope.\r\n--- Edsger Dijkstra ---\r\n','website','','','2018-12-05 13:32:54','2019-01-09 19:40:27'),(18,'4f5732b8-3db1-4e4b-ad06-c34d588fe961','fr',2,'/fr/diy','Fais le toi-même','Public','_self','Fais le toi-même',NULL,1,'front-parallax','','/diy-bw_0.png','','[[content-dir]]/diy-bw_0.png','','website','','','2018-12-05 13:35:42','2018-12-05 18:39:17'),(19,'e2e98573-2a9e-4d51-b694-a86a10b3e7f4','fr',2,'/fr/math','Les mathématiques','Public','_self','Les mathématiques',NULL,1,'front-parallax','','/mathematics.jpg','','[[content-dir]]/mathematics.jpg','','website','','','2018-12-05 13:42:12','2019-01-09 18:58:11'),(20,'05bc7850-5266-4577-aab9-300eb750633c','en',1,'/en/political-science','Political Science','Public','','Political Science',NULL,1,'front-parallax','','/political-science.png','','[[content-dir]]/political-science.png','','website','','','2018-12-05 22:37:38','2018-12-06 03:41:56'),(21,'7cc881cb-74ee-44de-83d1-8cacebd92465','fr',2,'/fr/philosophy','La philosophie','Public','_self','La philosophie',NULL,1,'front-parallax','','/philosophy.png','','[[content-dir]]/philosophy.png','','website','','','2018-12-05 22:51:14','2018-12-12 02:53:26'),(22,'c492f1dd-1e18-4d30-8e9b-18ec2fe53899','fr',2,'/fr/physics','La physique','Public','','La physique',NULL,1,'front-parallax','','/physics.png','','[[content-dir]]/physics.png','','website','','','2018-12-05 22:53:52','2018-12-12 02:49:13'),(23,'bbeedbd0-e8d9-41c6-8cd0-6ddfef0b2b7e','fr',2,'/fr/political-science','Science politique','Public','','Science politique',NULL,1,'front-parallax','','/political-science.png','','[[content-dir]]/political-science.png','','website','','','2018-12-05 22:55:46','2018-12-12 02:55:04'),(24,'28167920-8511-426a-9593-c548ce1cdf19','fr',2,'/fr/user-admin','Administration des utilisateurs','administrateurs','_self','Administration des utilisateurs',NULL,1,'user-admin','','/burning-giraffes-and-telephones.png','','[[content-dir]]/burning-giraffes-and-telephones.png','','website','','','2018-12-06 07:32:16','2018-12-12 02:55:38'),(25,'9f52833f-8a25-4239-9b38-4f94648d45c1','en',12,'/en/computer-science/information-theory','Information Theory','Public','_self','Information Theory',NULL,1,'simple','','/computer-science/information-theory-gal.png','','','My greatest concern was what to call it. I thought of calling it \'information,\' but the word was overly used, so I decided to call it \'uncertainty.\' When I discussed it with John von Neumann, he had a better idea. Von Neumann told me, \'You should call it entropy, for two reasons. In the first place your uncertainty function has been used in statistical mechanics under that name, so it already has a name. In the second place, and more important, no one really knows what entropy really is, so in a debate you will always have the advantage.\'  \r\n\r\n--- C.E. Shannon explaining why he named his uncertainty function entropy ---','website','','','2018-12-09 10:33:58','2019-01-09 16:57:24'),(27,'0901d0b7-3d9d-4d96-adac-eaecb1386400','en',9,'/en/usr/mabocss','Manin A. Bocss','Public','_self','Manin A. Bocss profile page',NULL,2,'profile','','/profiles-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 09:08:23','2019-01-09 11:48:45'),(28,'da5f67a0-f6d5-4a55-9012-ce9825bb6ef8','fr',10,'/fr/usr/mabocss','Manin A. Bocss','Public','_self','Manin A. Bocsss',NULL,2,'profile','','/profiles-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 09:44:51','2019-01-09 16:47:44'),(29,'7e24f162-8a7d-476e-850c-ad9aafed3566','en',9,'/en/usr/jgambini','John Gambini','Public','_self','John Gambini profile page',NULL,3,'profile','','/profiles-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 09:48:23','2019-01-09 14:50:48'),(30,'e8a1b957-3e50-4738-a835-232ddd84efbd','en',9,'/en/usr/mpoppins','Mary Poppins','Public','_self','Mary Poppins profile page',NULL,4,'profile','','/profiles-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 09:48:56','2019-01-09 14:51:07'),(31,'e4473e5c-d3e4-49a0-ad3c-ca7d806e05db','fr',10,'/fr/usr/jgambini','John Gambini','Public','_self','John Gambini',NULL,3,'profile','','/profiles-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 11:46:50','2019-01-09 16:47:23'),(32,'6123b672-3d76-4c2f-b0b4-cd79a1834524','fr',10,'/fr/usr/mpoppins','Mary Poppins','Public','_self','Mary Poppins',NULL,4,'profile','','/profiles-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 11:50:47','2019-01-09 16:51:07'),(33,'c99691aa-c90c-4925-842c-947d75dbcd28','en',11,'/en/math/math-resources','Math Resources','Public','_self','Math Resources',NULL,1,'gallery','','/math/algebraic-identities.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:21:28','2019-01-09 18:42:09'),(34,'c87de791-4bda-4830-bbb0-608b49832816','en',11,'/en/math/single-variable-calculus','Single Variable Calculus','Public','_self','Single Variable Calculus',NULL,1,'simple','','/math/single-var-calc.png','','','\"Before Newton and Leibniz, the word “calculus” referred to any body of mathematics, but in the following years, \"calculus\" became a popular term for a field of mathematics based upon their insights.\"<a class=\"linkItem\" href=\"http://en.wikipedia.org/wiki/History_of_calculus#Newton_and_Leibniz\" target=\"_blank\">--- Wikipedia. History of calculus: Newton and Leibniz ---</a>\r\n ','website','','','2019-01-09 13:22:48','2019-01-11 15:43:28'),(35,'f1e6246b-a841-48a5-a520-38fb00a085c2','en',11,'/en/math/multivariable-calculus','Multivariable Calculus','Public','_self','Multivariable Calculus',NULL,1,'gallery','','/math/multivar-calc.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:25:01','2019-01-09 18:43:55'),(36,'74f73258-04b7-4734-ac59-a9ad39e9043c','en',11,'/en/math/linear-algebra','Linear Algebra','Public','_self','Linear Algebra',NULL,1,'gallery','','/math/linear-and-geometric-algebra-cover.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:25:46','2019-01-09 18:44:34'),(37,'cc419932-9fb0-45e5-b65e-cecea5cb65d8','en',11,'/en/math/differential-equations','Differential Equations','Public','_self','Differential Equations',NULL,1,'gallery','','/math/diff-eq.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:27:14','2019-01-09 18:45:37'),(38,'df62bfab-1cf9-45cf-aec5-227619898fb0','en',11,'/en/math/probability-and-statistics','Probability and Statistics','Public','_self','Probability and Statistics',NULL,1,'gallery','','/math/probability.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:28:14','2019-01-09 18:47:24'),(39,'2c0cae23-00f9-4ae0-9e74-60d33c29d283','en',11,'/en/math/complex-analysis','Complex Analysis','Public','_self','Complex Analysis',NULL,1,'gallery','','/math/complexAnalysis.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:28:52','2019-01-09 18:51:10'),(40,'1d2d0260-ede5-4e09-961c-55073513a567','en',11,'/en/math/abstract-algebra','Abstract Algebra','Public','_self','Abstract Algebra',NULL,1,'gallery','','/math/abstract-algebra.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:29:32','2019-01-09 18:49:47'),(41,'454dd486-82f5-48ef-af99-13e8d7ac9806','fr',19,'/fr/math/math-resources','Ressource mathématiques','Public','','Ressource mathématiques',NULL,1,'gallery','','/math/algebraic-identities.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 13:59:59','2019-01-09 13:59:59'),(42,'754dbf48-425b-4226-a2c6-cbc31a4ee357','fr',19,'/fr/math/single-variable-calculus','Calcul de variable unique','Public','','Calcul de variable unique',NULL,1,'gallery','','/math/single-var-calc.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:07:34','2019-01-09 14:07:34'),(43,'678e3239-7aab-4a87-9629-656fceaa92e4','fr',19,'/fr/math/multivariable-calculus','Calcul multivariable','Public','','Calcul multivariable',NULL,1,'gallery','','/math/multivar-calc.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:18:07','2019-01-09 14:18:07'),(44,'463407ac-1cb0-45c7-af95-48cfb52f5ea9','fr',19,'/fr/math/linear-algebra','Algèbre linéaire','Public','','Algèbra linéaire',NULL,1,'gallery','','/math/linear-and-geometric-algebra-cover.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:26:32','2019-01-09 14:26:32'),(45,'b86e11ec-c62c-4588-ba21-2c71c5cbf85e','fr',19,'/fr/math/differential-equations','Équations différentielles','Public','','Équations différentielles',NULL,1,'gallery','','/math/diff-eq.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:28:12','2019-01-09 14:28:12'),(46,'9d758f84-6d4e-4bf9-82f6-d6fbc113fb15','fr',19,'/fr/math/probability-and-statistics','Probabilité et statistiques','Public','','Probabilité et statistiques',NULL,1,'gallery','','/math/probability.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:29:39','2019-01-09 14:29:39'),(47,'14dbd7f4-8632-4e3e-95a3-896c3c8e6a14','fr',19,'/fr/math/complex-analysis','Analyse complexe','Public','','Analyse complexe',NULL,1,'gallery','','/math/complexAnalysis.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:31:30','2019-01-09 14:31:30'),(48,'4dd6134c-5a7e-48ac-9f53-5a157edc148c','fr',19,'/fr/math/abstract-algebra','Algèbre abstraite','Public','','Algèbre abstraite',NULL,1,'gallery','','/math/abstract-algebra.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:33:01','2019-01-09 14:33:01'),(49,'39fa621f-6656-4ead-a60e-85b39b705f93','fr',17,'/fr/computer-science/information-theory','Théorie de l\'information','Public','','Théorie de l\'information',NULL,1,'gallery','','/computer-science/information-theory-gal.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:47:22','2019-01-09 14:47:22'),(50,'dde1b847-8c58-42ec-a8a6-126f0c2160a2','en',5,'/en/data-science-and-machine-learning/python','Python','Public','_self','Python',NULL,1,'gallery','','/data-science/python.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 14:49:17','2019-01-09 19:57:57'),(52,'b3d0b7a7-2b18-4665-87eb-c63bfa953b07','en',5,'/en/data-science-and-machine-learning/machine-learning','Machine Learning','Public','','Machine Learning',NULL,1,'gallery','','/blank.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 15:15:51','2019-01-09 15:15:51'),(53,'e2645533-2399-40f5-87ee-669d3c8f542b','en',33,'/en/math/math-resources/algebraic-identities','Algebraic Properties, Identities & Formulas','Public','_self','Algebraic Properties, Identities & Formulas',NULL,1,'article','','/math/algebraic-identities.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-09 22:46:15','2019-01-10 15:52:37'),(54,'5d632100-4af2-4037-9acb-9bfedcfb7e12','en',33,'/en/math/math-resources/trigonometric-identities','Trigonometric Identities','Public','','Trigonometric Identities article page',NULL,1,'article','','/math/resources/trig-identities.png','',NULL,NULL,NULL,NULL,NULL,'2019-01-10 21:15:54','2019-01-10 21:15:54'),(55,'3873392b-8079-4614-a72d-2b4ff6315ba7','en',34,'/en/math/single-variable-calculus/integration/antidifferentiation','Antidifferentiation and the Indefinite Integral','Public','','Antidifferentiation and the Indefinite Integral',NULL,1,'article','','/math/single-var-calc/antidifferentiation.png','','[[content-dir]]/math/single-var-calc/differs-by-a-constant.png','When taking the antiderivative of a polynomial, the result is a set of functions that differ by a constant. We call this set the <em>general antiderivative</em>.\r\n','article','John Gambini','','2019-01-10 23:37:32','2019-01-12 22:55:40');
+/*!40000 ALTER TABLE `wb_content` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_grouplists`
+--
+
+DROP TABLE IF EXISTS `wb_grouplists`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_grouplists` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `groupId` int(11) DEFAULT NULL,
+  `userId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_grouplists`
+--
+
+LOCK TABLES `wb_grouplists` WRITE;
+/*!40000 ALTER TABLE `wb_grouplists` DISABLE KEYS */;
+INSERT INTO `wb_grouplists` VALUES (3,1,1),(4,2,1);
+/*!40000 ALTER TABLE `wb_grouplists` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_menugroups`
+--
+
+DROP TABLE IF EXISTS `wb_menugroups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_menugroups` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `parentId` int(11) DEFAULT NULL,
+  `contentId` int(11) DEFAULT NULL,
+  `trackParent` tinyint(1) DEFAULT NULL,
+  `mgseq` smallint(6) DEFAULT NULL,
+  `menuId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_menugroups`
+--
+
+LOCK TABLES `wb_menugroups` WRITE;
+/*!40000 ALTER TABLE `wb_menugroups` DISABLE KEYS */;
+INSERT INTO `wb_menugroups` VALUES (1,0,1,1,1,3),(2,0,2,1,1,4),(3,1,5,NULL,1,3),(5,1,7,NULL,1,3),(6,2,8,NULL,1,4),(9,1,9,1,1,3),(10,2,10,1,1,4),(11,1,11,NULL,1,3),(17,1,12,1,1,3),(18,1,14,1,1,3),(19,1,15,1,1,3),(20,1,13,1,1,3),(21,1,16,1,1,3),(26,1,20,1,1,3),(31,2,19,1,1,4),(32,2,18,1,1,4),(33,2,17,1,1,4),(34,2,6,1,1,4),(35,2,21,1,1,4),(36,2,22,1,1,4),(37,2,23,1,1,4),(38,2,24,1,1,4),(39,12,25,NULL,1,12),(40,10,28,NULL,1,10),(41,10,31,NULL,1,10),(42,10,32,NULL,1,10),(43,11,33,NULL,1,11),(44,11,34,NULL,1,11),(45,11,35,NULL,1,11),(46,11,36,NULL,1,11),(47,11,37,NULL,1,11),(48,11,38,NULL,1,11),(49,11,39,NULL,1,11),(50,11,40,NULL,1,11),(51,19,41,NULL,1,19),(52,19,42,NULL,1,19),(53,19,43,NULL,1,19),(54,19,44,NULL,1,19),(55,19,45,NULL,1,19),(56,19,46,NULL,1,19),(57,19,47,NULL,1,19),(58,19,48,NULL,1,19),(59,17,49,NULL,1,17),(60,5,50,NULL,1,5),(62,5,52,NULL,1,5),(63,33,53,NULL,1,33),(64,33,54,NULL,1,33),(65,34,55,NULL,1,34);
+/*!40000 ALTER TABLE `wb_menugroups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_menuitems`
+--
+
+DROP TABLE IF EXISTS `wb_menuitems`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_menuitems` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `menuId` int(11) DEFAULT NULL,
+  `menuType` tinyint(4) NOT NULL DEFAULT '1',
+  `sequence` smallint(6) DEFAULT NULL,
+  `contentId` int(11) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=52 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_menuitems`
+--
+
+LOCK TABLES `wb_menuitems` WRITE;
+/*!40000 ALTER TABLE `wb_menuitems` DISABLE KEYS */;
+INSERT INTO `wb_menuitems` VALUES (2,1,1,2,5),(3,2,1,2,6),(4,3,1,2,7),(5,4,1,1,8),(7,1,1,6,11),(8,1,1,1,12),(9,1,1,8,13),(10,1,1,3,14),(11,1,1,7,15),(12,1,1,10,16),(13,2,1,1,17),(14,2,1,3,18),(15,2,1,5,19),(16,1,1,9,20),(17,2,1,5,21),(18,2,1,6,22),(19,2,1,7,23),(20,2,1,8,24),(21,12,1,1,25),(22,9,1,1,27),(23,10,1,1,28),(24,9,1,2,29),(25,9,1,3,30),(26,10,1,2,31),(27,10,1,3,32),(28,11,1,1,33),(29,11,1,2,34),(30,11,1,3,35),(31,11,1,4,36),(32,11,1,5,37),(33,11,1,6,38),(34,11,1,7,39),(35,11,1,8,40),(36,19,1,1,41),(37,19,1,2,42),(38,19,1,3,43),(39,19,1,4,44),(40,19,1,5,45),(41,19,1,6,46),(42,19,1,7,47),(43,19,1,8,48),(44,17,1,2,49),(45,5,1,1,50),(46,5,1,2,38),(48,5,1,3,52),(49,33,1,1,53),(50,33,1,2,54),(51,34,1,1,55);
+/*!40000 ALTER TABLE `wb_menuitems` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_pagetypes`
+--
+
+DROP TABLE IF EXISTS `wb_pagetypes`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_pagetypes` (
+  `ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `userSelect` tinyint(4) DEFAULT NULL,
+  `pageTypeName` varchar(63) COLLATE utf8_unicode_ci NOT NULL,
+  `seq` tinyint(4) DEFAULT NULL,
+  `isMenu` tinyint(1) DEFAULT '0',
+  `isParent` tinyint(1) DEFAULT '0',
+  `canEdit` tinyint(4) DEFAULT NULL,
+  `hasRightbar` tinyint(4) DEFAULT NULL,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_pagetypes`
+--
+
+LOCK TABLES `wb_pagetypes` WRITE;
+/*!40000 ALTER TABLE `wb_pagetypes` DISABLE KEYS */;
+INSERT INTO `wb_pagetypes` VALUES (1,4,'menu',-1,1,0,0,0),(2,1,'default',-1,0,1,0,0),(3,1,'acrobat',4,0,0,0,0),(4,1,'article',4,1,1,1,1),(5,1,'article-old',4,0,0,1,1),(6,1,'front-page',4,1,1,0,0),(7,1,'gallery',4,1,1,0,1),(8,1,'image',4,0,0,1,0),(9,1,'profile',4,1,1,1,1),(10,4,'user-admin',4,0,0,0,0),(11,4,'edit-post',-1,0,0,0,0),(12,4,'all-posts',4,0,0,0,0),(13,1,'featured',4,0,1,0,0),(14,1,'parallax',4,1,1,0,0),(15,1,'simple',1,1,1,1,1),(16,1,'articles',4,1,1,1,0),(17,1,'simple-nsb',2,1,1,1,1),(18,1,'front-parallax',4,1,1,1,1);
+/*!40000 ALTER TABLE `wb_pagetypes` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_user`
+--
+
+DROP TABLE IF EXISTS `wb_user`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_user` (
+  `ID` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `userBlob` binary(16) DEFAULT NULL,
+  `profileId` int(11) DEFAULT NULL,
+  `username` varchar(120) COLLATE utf8_unicode_ci NOT NULL,
+  `password` varchar(40) COLLATE utf8_unicode_ci NOT NULL,
+  `type` tinyint(1) unsigned DEFAULT '1',
+  `fullName` varchar(63) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `theme` varchar(63) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `disabled` tinyint(1) unsigned DEFAULT '0',
+  `addedBy` int(11) DEFAULT NULL,
+  `created_dt` datetime DEFAULT CURRENT_TIMESTAMP,
+  `modified_ts` timestamp NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `uniq_idx` (`username`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_user`
+--
+
+LOCK TABLES `wb_user` WRITE;
+/*!40000 ALTER TABLE `wb_user` DISABLE KEYS */;
+INSERT INTO `wb_user` VALUES (1,'*\ZÃÂÃÂ',1,'ntorvez','ntorvez',4,'Ninja Torvez','utere-verbis',0,1,'2017-01-29 20:12:24','2018-12-25 02:06:47'),(2,'�V\�<��۞\�+',27,'mabocss','mabocss',3,'Manin A. Bocss',NULL,0,1,'2019-01-09 09:08:23','2019-01-09 14:08:23'),(3,'�D|�\�<��۞\�+',29,'jgambini','jgambini',3,'John Gambini',NULL,0,1,'2019-01-09 09:48:23','2019-01-09 14:48:23'),(4,'�0+\r\�<��۞\�+',30,'mpoppins','mpoppins',2,'Mary Poppins',NULL,0,1,'2019-01-09 09:48:56','2019-01-09 14:48:56');
+/*!40000 ALTER TABLE `wb_user` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!50003 SET @saved_cs_client      = @@character_set_client */ ;
+/*!50003 SET @saved_cs_results     = @@character_set_results */ ;
+/*!50003 SET @saved_col_connection = @@collation_connection */ ;
+/*!50003 SET character_set_client  = utf8 */ ;
+/*!50003 SET character_set_results = utf8 */ ;
+/*!50003 SET collation_connection  = utf8_general_ci */ ;
+/*!50003 SET @saved_sql_mode       = @@sql_mode */ ;
+/*!50003 SET sql_mode              = 'NO_ENGINE_SUBSTITUTION' */ ;
+DELIMITER ;;
+/*!50003 CREATE*/ /*!50017 DEFINER=`root`@`localhost`*/ /*!50003 TRIGGER wb_user_guid
+BEFORE INSERT ON wb_user 
+FOR EACH ROW
+SET new.userBlob = unhex(replace(uuid(),'-','')) */;;
+DELIMITER ;
+/*!50003 SET sql_mode              = @saved_sql_mode */ ;
+/*!50003 SET character_set_client  = @saved_cs_client */ ;
+/*!50003 SET character_set_results = @saved_cs_results */ ;
+/*!50003 SET collation_connection  = @saved_col_connection */ ;
+
+--
+-- Table structure for table `wb_userbios`
+--
+
+DROP TABLE IF EXISTS `wb_userbios`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_userbios` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `userId` int(11) DEFAULT NULL,
+  `lang` varchar(6) DEFAULT NULL,
+  `profileImage` varchar(127) DEFAULT NULL,
+  `bio` text,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `idx_bios` (`userId`,`lang`)
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_userbios`
+--
+
+LOCK TABLES `wb_userbios` WRITE;
+/*!40000 ALTER TABLE `wb_userbios` DISABLE KEYS */;
+INSERT INTO `wb_userbios` VALUES (1,2,'en','/usr/mabocss/mabocss.jpg',NULL),(2,2,'fr','/usr/mabocss/mabocss.jpg',NULL),(3,3,'en','/usr/jgambini/me9.jpg','<h2>Bio</h2><p/>Retired software engineer with 20+ years designing, writing and maintaining business apps mostly in C++ and MFC. Presently developing a silly web app that lets me maintain my own notes regarding areas I enjoy studying. Math and physics student, piano player, and machine learning enthusiast.'),(4,3,'fr','/usr/jgambini/me9.jpg','<h2>À propos de moi</h2><p/>Ingénieur logiciel retraité avec plus de 20 ans d\'expérience dans la conception, la rédaction et la maintenance d\'applications métier, principalement en C/C++ et MFC. Je suis un Américain qui apprend le français. J\'utilise Google Translate pour écrire en français jusqu\'à ce que je sois plus à l\'aise. Veuillez pardonner les erreurs de grammaire et d’orthographe que vous pourriez rencontrer.'),(5,4,'en','/usr/mpoppins/mpoppins.jpg','<h2>Bio</h2><p/>I am a no nonsense and tough nanny who uses \"extra ordinary\" measures to instill discipline to the children. Sometimes I must scold the children if they think I\'m using some kind of magical powers (rediculous!). I am, however, considered extrodinary by some of my freinds because I never lost the ability to talk to animals. An ability, as you know, we all had when we were children.'),(6,4,'fr','/usr/mpoppins/mpoppins.jpg','<h2>À propos de moi</h2><p/>Je suis une nourrice sans scrupule et dure qui utilise des mesures «extra ordinaires» pour inculquer la discipline aux enfants. Parfois, je dois gronder les enfants s\'ils pensent que j\'utilise une sorte de magie (ridicule!). Cependant, certains de mes amis me considèrent comme une exception car je n\'ai jamais perdu la possibilité de parler aux animaux. Comme vous le savez, nous avions tous cette capacité lorsque nous étions enfants.');
+/*!40000 ALTER TABLE `wb_userbios` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `wb_usergroups`
+--
+
+DROP TABLE IF EXISTS `wb_usergroups`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8 */;
+CREATE TABLE `wb_usergroups` (
+  `ID` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(63) NOT NULL,
+  `shortDescription` varchar(127) DEFAULT NULL,
+  `lang` varchar(6) DEFAULT NULL,
+  PRIMARY KEY (`ID`),
+  UNIQUE KEY `idx_ugroups` (`lang`,`name`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `wb_usergroups`
+--
+
+LOCK TABLES `wb_usergroups` WRITE;
+/*!40000 ALTER TABLE `wb_usergroups` DISABLE KEYS */;
+INSERT INTO `wb_usergroups` VALUES (1,'Administrators','Administrators','en'),(2,'administrateurs','administrateurs','fr');
+/*!40000 ALTER TABLE `wb_usergroups` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Final view structure for view `vw_content`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_content`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_content` AS select `wb_content`.`ID` AS `ID`,`wb_content`.`guid` AS `guid`,`wb_content`.`lang` AS `lang`,`wb_content`.`defaultParentId` AS `defaultParentId`,`wb_content`.`permalink` AS `permalink`,`wb_content`.`title` AS `title`,`wb_content`.`status` AS `status`,`wb_content`.`target` AS `target`,`wb_content`.`shortDescription` AS `shortDescription`,`wb_content`.`creatorId` AS `creatorId`,`wb_content`.`ownerId` AS `ownerId`,`vw_user`.`type` AS `ownerType`,`vw_user`.`fullName` AS `ownerFullName`,`vw_user`.`permalink` AS `ownerLink`,`wb_content`.`pageType` AS `pageType`,`wb_pagetypes`.`canEdit` AS `canEdit`,`wb_pagetypes`.`hasRightbar` AS `hasRightbar`,`wb_content`.`galleryImage` AS `galleryImage`,`wb_content`.`pageArgument` AS `pageArgument`,`wb_content`.`articleFile` AS `articleFile`,`wb_content`.`articleImage` AS `articleImage`,`wb_content`.`articleDescription` AS `articleDescription`,`wb_content`.`ogType` AS `ogType`,`wb_content`.`authorFullName` AS `authorFullName`,`wb_content`.`authorLink` AS `authorLink`,`wb_content`.`dateCreated` AS `dateCreated`,`wb_content`.`dateModified` AS `dateModified` from ((`wb_content` left join `vw_user` on((`wb_content`.`ownerId` = `vw_user`.`ID`))) join `wb_pagetypes`) where (`wb_content`.`pageType` = `wb_pagetypes`.`pageTypeName`) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_contentlist`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_contentlist`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_contentlist` AS select `wb_menuitems`.`ID` AS `itemId`,`wb_menuitems`.`menuId` AS `menuId`,`wb_menuitems`.`menuType` AS `menuType`,`wb_content`.`ID` AS `contentId`,`wb_content`.`lang` AS `lang`,`wb_content`.`defaultParentId` AS `defaultParentId`,`wb_content`.`permalink` AS `permalink`,`wb_content`.`title` AS `title`,`wb_menuitems`.`sequence` AS `sequence`,`wb_content`.`status` AS `status`,`wb_content`.`target` AS `target`,`wb_content`.`galleryImage` AS `galleryImage`,`wb_content`.`pageType` AS `pageType`,`wb_content`.`ownerId` AS `ownerId`,`wb_content`.`authorFullName` AS `authorFullName`,`wb_content`.`authorLink` AS `authorLink`,`wb_content`.`articleImage` AS `articleImage`,`wb_content`.`articleDescription` AS `articleDescription`,`wb_content`.`ogType` AS `ogType` from (`wb_menuitems` join `wb_content`) where (`wb_menuitems`.`contentId` = `wb_content`.`ID`) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_menulist`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_menulist`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_menulist` AS select `wb_content`.`ID` AS `menuId`,`wb_content`.`lang` AS `m_lang`,`wb_content`.`defaultParentId` AS `m_parentId`,`wb_content`.`permalink` AS `m_permalink`,`wb_content`.`title` AS `menuTitle`,`wb_content`.`shortDescription` AS `menuDescription`,`wb_content`.`status` AS `m_status`,`wb_content`.`ownerId` AS `m_ownerId`,`wb_content`.`pageType` AS `m_pageType`,`wb_content`.`pageArgument` AS `m_pageArgument` from `wb_content` where `wb_content`.`pageType` in (select `wb_pagetypes`.`pageTypeName` from `wb_pagetypes` where (`wb_pagetypes`.`isMenu` = TRUE)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_menulist2`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_menulist2`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_menulist2` AS select `wb_content`.`ID` AS `menuId`,`wb_content`.`lang` AS `m_lang`,`wb_content`.`permalink` AS `m_permalink`,`wb_content`.`title` AS `menuTitle`,`wb_content`.`shortDescription` AS `menuDescription`,`wb_content`.`status` AS `m_status`,`wb_content`.`ownerId` AS `m_ownerId`,`wb_content`.`pageType` AS `m_pageType` from `wb_content` where `wb_content`.`pageType` in (select `wb_pagetypes`.`pageTypeName` from `wb_pagetypes` where (`wb_pagetypes`.`isMenu` = TRUE)) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+
+--
+-- Final view structure for view `vw_user`
+--
+
+/*!50001 DROP VIEW IF EXISTS `vw_user`*/;
+/*!50001 SET @saved_cs_client          = @@character_set_client */;
+/*!50001 SET @saved_cs_results         = @@character_set_results */;
+/*!50001 SET @saved_col_connection     = @@collation_connection */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_general_ci */;
+/*!50001 CREATE ALGORITHM=UNDEFINED */
+/*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
+/*!50001 VIEW `vw_user` AS select `wb_user`.`ID` AS `ID`,`wb_user`.`userBlob` AS `userBlob`,`wb_user`.`username` AS `username`,`wb_user`.`password` AS `password`,`wb_content`.`permalink` AS `permalink`,`wb_user`.`fullName` AS `fullName`,`wb_user`.`theme` AS `theme`,`wb_user`.`type` AS `type`,`wb_content`.`pageType` AS `pageType` from (`wb_user` left join `wb_content` on((`wb_user`.`profileId` = `wb_content`.`ID`))) */;
+/*!50001 SET character_set_client      = @saved_cs_client */;
+/*!50001 SET character_set_results     = @saved_cs_results */;
+/*!50001 SET collation_connection      = @saved_col_connection */;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2019-01-14 10:24:46
