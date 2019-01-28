@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1806fee3a81b12d00fcdb9e82251c7fd",
+    "content-hash": "cbe18dccb112ca1165d6594242b4c2a6",
     "packages": [
         {
             "name": "gettext/gettext",
-            "version": "v4.6.1",
+            "version": "v4.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/oscarotero/Gettext.git",
-                "reference": "854ff5f5aaf92d2af7080ba8fc15718b27b5c89a"
+                "reference": "93176b272d61fb58a9767be71c50d19149cb1e48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/oscarotero/Gettext/zipball/854ff5f5aaf92d2af7080ba8fc15718b27b5c89a",
-                "reference": "854ff5f5aaf92d2af7080ba8fc15718b27b5c89a",
+                "url": "https://api.github.com/repos/oscarotero/Gettext/zipball/93176b272d61fb58a9767be71c50d19149cb1e48",
+                "reference": "93176b272d61fb58a9767be71c50d19149cb1e48",
                 "shasum": ""
             },
             "require": {
@@ -66,7 +66,7 @@
                 "po",
                 "translation"
             ],
-            "time": "2018-08-27T15:40:19+00:00"
+            "time": "2019-01-12T18:40:56+00:00"
         },
         {
             "name": "gettext/languages",
@@ -131,16 +131,16 @@
         },
         {
             "name": "workbench/core",
-            "version": "0.4.20",
+            "version": "0.4.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JohnGambini/workbench.git",
-                "reference": "b5a03422f88b45b3bfd5c4dc82d2adef91e1da85"
+                "reference": "2ceb40284bd8731066c32177f119e92bc07fd678"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/b5a03422f88b45b3bfd5c4dc82d2adef91e1da85",
-                "reference": "b5a03422f88b45b3bfd5c4dc82d2adef91e1da85",
+                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/2ceb40284bd8731066c32177f119e92bc07fd678",
+                "reference": "2ceb40284bd8731066c32177f119e92bc07fd678",
                 "shasum": ""
             },
             "require": {
@@ -160,10 +160,10 @@
             "description": "A content management codebase",
             "homepage": "https://plus.google.com/+JohnGambini",
             "support": {
-                "source": "https://github.com/JohnGambini/workbench/tree/master",
+                "source": "https://github.com/JohnGambini/workbench/tree/0.4.22",
                 "issues": "https://github.com/JohnGambini/workbench/issues"
             },
-            "time": "2019-01-09T23:53:45+00:00"
+            "time": "2019-01-28T01:59:52+00:00"
         },
         {
             "name": "workbench/db",
