@@ -7,7 +7,7 @@
  ----------------------------------------------------------------------*/
 define('APP_NAME','Manin A. Bocss');
 define('SITE_NAME', 'http://' . $_SERVER['HTTP_HOST']);
-define('DATABASE', 'maninabocss');
+define('DATABASE', 'workbench_1');
 define('THEME','utere-verbis');
 define('SUBSITE_NAME', '/notes');
 define('WORKBENCH_FOLDER', SITE_NAME . SUBSITE_NAME . '/vendor/workbench/core');
