@@ -39,7 +39,7 @@ global $dataArrays;
 	<meta property="og:site_name" content="<?php echo APP_NAME  ?>" />
 	<link rel="shortcut icon" href="<?php echo SITE_NAME . SUBSITE_NAME ?>/favicon.ico">
 	<link rel="stylesheet" href="<?php echo WORKBENCH_FOLDER ?>/css/dialogs.css" type="text/css" media="screen">
-	<link rel="stylesheet" href="<?php echo WORKBENCH_FOLDER ?>/css/calliopesutra.css" type="text/css" media="screen">
+	<link rel="stylesheet" href="<?php echo WORKBENCH_FOLDER ?>/css/workbench.css" type="text/css" media="screen">
 	<link rel="stylesheet" href="<?php echo WORKBENCH_FOLDER ?>/css/icomoon.css" type="text/css" media="screen"/>
 
 	<!-- css theme specific overides of default workbench css  -->
