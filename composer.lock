@@ -131,16 +131,16 @@
         },
         {
             "name": "workbench/core",
-            "version": "0.4.29",
+            "version": "0.4.30",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JohnGambini/workbench.git",
-                "reference": "9bad9d37fae9be47ea2d6d79ae9f9ca5c7be74bd"
+                "reference": "8e017325b880a97136c529f6690a70ae859bf794"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/9bad9d37fae9be47ea2d6d79ae9f9ca5c7be74bd",
-                "reference": "9bad9d37fae9be47ea2d6d79ae9f9ca5c7be74bd",
+                "url": "https://api.github.com/repos/JohnGambini/workbench/zipball/8e017325b880a97136c529f6690a70ae859bf794",
+                "reference": "8e017325b880a97136c529f6690a70ae859bf794",
                 "shasum": ""
             },
             "require": {
@@ -160,10 +160,10 @@
             "description": "A content management codebase",
             "homepage": "https://plus.google.com/+JohnGambini",
             "support": {
-                "source": "https://github.com/JohnGambini/workbench/tree/0.4.29",
+                "source": "https://github.com/JohnGambini/workbench/tree/0.4.30",
                 "issues": "https://github.com/JohnGambini/workbench/issues"
             },
-            "time": "2019-02-19T12:46:04+00:00"
+            "time": "2019-02-20T13:54:33+00:00"
         },
         {
             "name": "workbench/db",
